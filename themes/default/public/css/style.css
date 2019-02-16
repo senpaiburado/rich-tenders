@@ -4,6 +4,58 @@ Author URL: http://w3layouts.com
 License: Creative Commons Attribution 3.0 Unported
 License URL: http://creativecommons.org/licenses/by/3.0/
 --*/
+/* перехід */
+.paginator {
+    width: 575px;
+    padding: 10px;
+    margin: 30px auto;
+    white-space: nowrap;
+    background: #fff;
+}
+
+.paginator a,
+.paginator span {
+    display: inline-block;
+    min-width: 44px;
+    height: 40px;
+    padding: 0 10px;
+    line-height: 40px;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    text-align: center;
+    vertical-align: middle;
+    background: #D32F2F;
+}
+
+.paginator .prev {
+    text-indent: -1000px;
+    margin-right: 20px;
+    background-image: url("../web/images/search2.png");
+    background-repeat :no-repeat ;
+    background-position: 15px 12px;
+}
+
+.paginator .next {
+    text-indent: -1000px;
+    margin-left: 20px;
+    background-image: url("../web/images/search.png");
+    background-repeat :no-repeat ;
+    background-position: 15px 12px;
+}
+.paginator .current {
+    background-color: #616161;
+}
+
+.paginator .disabled {
+    opacity: 0.3;
+}
+
+.paginator a:hover {
+    background-color: #616161;
+}
+/* перехід */
+
 .img-fluid1{						/* Размер лого */
 right: 100px;
   max-width: 50%;
@@ -592,19 +644,41 @@ h3.tittle-w3l span {
 .product-men:nth-child(4) .product-new-top {
     background: #219ff3;
 }
-
-.product-new-top {
-    background: #ff2978;
+.product-new-top1 {																				/*кількість купленого */
+    background: #D32F2F;
     color: #fff;
     position: absolute;
-    top: 0;
-    left: 0;
-    font-size: 13px;
+    top: -25%;
+    left: 	60%;
+    font-size: 10px;
+    text-align: center;
+    padding: 4px 6px;
+    border-radius: 30px;
+}
+
+ .product-new-top {
+    background: #D32F2F;
+    color: #fff;
+    position: absolute;
+    top: 15%;
+    left: 10%;
+    font-size: 10px;
     text-align: center;
     padding: 4px 10px;
     border-radius: 4px;
 }
 
+.product-new-top2 {
+    background: #616161;
+    color: #fff;
+    position: absolute;
+    top: 15%;
+    left: 10%;
+    font-size: 10px;
+    text-align: center;
+    padding: 4px 10px;
+    border-radius: 4px;
+}
 .inner-men-cart-pro {
     height: 100%;
     position: relative;
@@ -812,7 +886,7 @@ h3.tittle-w3l span {
 }
 
 .search-hotel form input[type="submit"] {
-    background: url(../images/search.png) no-repeat 13px 11px #757575;						/* пошук правий */
+    background: url(../web/images/search.png) no-repeat 13px 11px #757575;						/* пошук правий */
     width: 44px;
     height: 39px;
     border: none;
@@ -999,11 +1073,8 @@ p.w3l-nut-middle {
 }
 
 /*-- //search --*/
-
 /*-- //product right --*/
-
 /*-- middle section --*/
-
 .join-w3l1 {
     background: url(../images/bg.jpg) no-repeat center fixed;
     background-size: cover;
@@ -1108,7 +1179,7 @@ h2.footer-top-head-w3l {
 }
 
 .w3l-middlefooter-sec {
-    background: #333;
+    background: #616161;
 }
 
 /*-- social-icons --*/
@@ -1279,7 +1350,7 @@ h2.footer-top-head-w3l {
     height: 64px;
     border: none;
     text-indent: 100%;
-    background: url("../images/move-up.png") no-repeat 0px 0px;
+    background: url(../default/public/web/imagesmove-up.png") no-repeat 0px 0px;
 }
 
 #toTopHover {
