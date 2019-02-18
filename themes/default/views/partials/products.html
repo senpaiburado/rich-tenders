@@ -29,11 +29,11 @@
 									</div>
 									<div class="item-info-product text-center border-top mt-4">
 										<h4 class="pt-1">
-											<a href="single.html">Samsung Galaxy J7</a>
+											<a href="single.html">@{item.name}</a>
 										</h4>
 										<div class="info-product-price my-2">
-
-											<span class="item_price1">$200.00</span>
+											<span class="item_price1">@{item.pricemin.currency()}</span>
+											@{if item.priceold && item.priceold < item.pricemin}<del>@{item.priceold.currency()}</del>@{fi}
 										</div>
 										<div class="snipcart-details top_brand_home_details item_add single-item hvr-outline-out">
 											<fieldset>
