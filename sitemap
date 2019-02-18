@@ -1,8 +1,9 @@
 // Common
-homepage          : @(Homepage)            --> /
+homepage          : @(Homepage)            --> @(/)
 posts             : @(Blog)                --> @(/blog/)                 --> homepage
 post              : @(Post)                --> @(/blog/{0}/)             --> posts
 notices           : @(Notices)             --> @(/notices/)              --> homepage
+about             : @(About us)            --> @(/about/)                --> homepage
 
 // Admin area
 admin             : @(Admin)               --> @(/admin/*)
@@ -18,3 +19,4 @@ account           : @(My account)          --> @(/account/)             --> home
 order             : @(Order detail)        --> @(/checkout/{0}/)        --> account
 settings          : @(Account settings)    --> @(/account/settings/)    --> account
 logoff            : @(Logoff)              --> @(/logoff/)              --> homepage
+contact           : @(Contact)             --> @(/contact/)             --> homepage

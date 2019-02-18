@@ -10,6 +10,8 @@ exports.install = function() {
 	ROUTE('#settings', 'settings', ['authorize']);
 	ROUTE('#account', view_signin, ['unauthorize']);
 	ROUTE('#logoff', redirect_logoff, ['authorize']);
+	ROUTE('#contact');
+	ROUTE('#about')
 
 	// Payment process
 	ROUTE('#order/paypal/', paypal_process, ['*Order', 10000]);
@@ -50,7 +52,7 @@ function view_category() {
 		self.title(self.sitemap_name('category'));
 
 	options.published = true;
-	options.limit = 15;
+	options.limit = 9;
 
 	self.query.page && (options.page = self.query.page);
 	self.query.manufacturer && (options.manufacturer = self.query.manufacturer);
@@ -59,9 +61,32 @@ function view_category() {
 	self.query.q && (options.search = self.query.q);
 	self.query.sort && (options.sort = self.query.sort);
 
+	// NOSQL('products').find({ category: category.name }).make(function(builder) {
+	// 	builder.page(self.query.page ? self.query.page : 1, 9);
+	// 	builder.callback(function(err, result, count) {
+	// 		if (err) {
+	// 			self.invalid.push(err)
+	// 			return;
+	// 		}
+	// 		var arr = [];
+	// 		while (result.length > 0)
+	// 			arr.push(result.slice(0, 3));
+	// 		console.log(arr);
+	// 		self.view('category', {});
+	// 	});
+	// });
+
 	$QUERY('Product', options, function(err, response) {
 		self.repository.linker_category = linker;
-		self.view('category', response);
+		// var arr = [];
+		// 	while (response.length > 0)
+		// 		arr.push(response.slice(0, 3));
+			console.log(response);
+
+		self.view('category', {
+			items: response,
+			category_name: category.name
+		});
 	});
 }
 

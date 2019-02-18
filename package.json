@@ -8,6 +8,7 @@
     "url": "https://github.com/totaljs/eshop"
   },
   "dependencies": {
+    "json-groupby": "^1.1.0",
     "paypal-express-checkout": "latest",
     "total.js": "^3.1.0"
   },
