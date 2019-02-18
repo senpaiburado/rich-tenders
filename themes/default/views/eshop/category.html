@@ -1,5 +1,5 @@
-@{if model.length}
-	@{view('~/partials/products', model)}
+@{if model.count}
+	@{view('~/partials/category_product', model)}
 	@{view('~/partials/left_filter')}
 @{else}
 	<br />

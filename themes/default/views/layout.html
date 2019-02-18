@@ -289,17 +289,18 @@
 			<nav class="navbar navbar-expand-lg navbar-light bg-light">
 				<div class="agileits-navi_search">
 					<form action="#" method="post">
-						<select id="agileinfo-nav_search" name="agileinfo_search" class="border" required="">
+						<select id="agileinfo-nav_search" name="agileinfo_search" class="border" onchange="location = this.value" onfocus="this.selectedIndex = -1;">
+							<option disable selected>Category</option>
 							@{if repository.category}
 								@{foreach m in repository.category}
 									@{if m.count}
-										<option><a href="@{href('manufacturer', m.linker, 'page')}">@{m.name}</a></option>
+										<option value="@{sitemap_url('category')}@{m.linker}">@{m.name}</option>
 									@{fi}
 								@{end}
 							@{else}
 								@{foreach m in global.categories}
 									@{if m.count}
-										<option><a href="@{href('manufacturer', m.linker, 'page')}">@{m.name}</a></option>
+										<option value="@{sitemap_url('category')}@{m.linker}">@{m.name}</option>
 									@{fi}
 								@{end}
 							@{fi}

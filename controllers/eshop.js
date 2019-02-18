@@ -39,7 +39,7 @@ function view_category() {
 	if (category) {
 		options.category = category.linker;
 		self.title(category.name);
-		self.repository.category = category;
+		//self.repository.category = category;
 
 		var path = self.sitemap_url('category');
 		var tmp = category;
@@ -61,31 +61,33 @@ function view_category() {
 	self.query.q && (options.search = self.query.q);
 	self.query.sort && (options.sort = self.query.sort);
 
-	// NOSQL('products').find({ category: category.name }).make(function(builder) {
-	// 	builder.page(self.query.page ? self.query.page : 1, 9);
-	// 	builder.callback(function(err, result, count) {
-	// 		if (err) {
-	// 			self.invalid.push(err)
-	// 			return;
-	// 		}
-	// 		var arr = [];
-	// 		while (result.length > 0)
-	// 			arr.push(result.slice(0, 3));
-	// 		console.log(arr);
-	// 		self.view('category', {});
-	// 	});
-	// });
-
 	$QUERY('Product', options, function(err, response) {
-		self.repository.linker_category = linker;
-		// var arr = [];
-		// 	while (response.length > 0)
-		// 		arr.push(response.slice(0, 3));
-			console.log(response);
+		//self.repository.linker_category = linker;
+		var arr = [];
+		for (var i = 0; i < Object.keys(response.items).length; i++) {
+			if (i < 3) {
+				if (!arr[0])
+					arr.push([]);
+				arr[0].push(response.items[i]);
+			}
+			else if (i < 6) {
+				if (!arr[1])
+					arr.push([]);
+				arr[1].push(response.items[i]);
+			}
+			else {
+				if (!arr[2])
+					arr.push([]);
+				arr[2].push(response.items[i]);
+			}
+		}
+
+		console.log(arr);
 
 		self.view('category', {
-			items: response,
-			category_name: category.name
+			items: arr,
+			category_name: category.name,
+			count: Object.keys(response.items).length
 		});
 	});
 }

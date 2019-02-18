@@ -5,12 +5,46 @@ License: Creative Commons Attribution 3.0 Unported
 License URL: http://creativecommons.org/licenses/by/3.0/
 --*/
 /* перехід */
+.Dno{
+	 text-align: center;
+}
+.textG a{
+	 padding: 10px;
+color:#757575;
+}
+.textG a:hover {
+color: #fff;
+}
 .paginator {
     width: 575px;
     padding: 10px;
     margin: 30px auto;
     white-space: nowrap;
     background: #fff;
+}
+
+.textB a{	
+padding:10px;
+color:#757575;
+}
+
+.textB i{
+	 padding: 10px;
+color:#757575;
+}
+
+.paginator {
+    width: 575px;
+    padding: 10px;
+    margin: 30px auto;
+    white-space: nowrap;
+    background: #fff;
+}
+
+.textC {	
+padding:10px;
+color:#757575;
+
 }
 
 .paginator a,
@@ -656,7 +690,7 @@ h3.tittle-w3l span {
     border-radius: 30px;
 }
 
- .product-new-top {
+ .product-new-top {	
     background: #D32F2F;
     color: #fff;
     position: absolute;
@@ -673,6 +707,17 @@ h3.tittle-w3l span {
     color: #fff;
     position: absolute;
     top: 15%;
+    left: 10%;
+    font-size: 10px;
+    text-align: center;
+    padding: 4px 10px;
+    border-radius: 4px;
+}
+.product-new-top4 {
+    background: #616161;
+    color: #fff;
+    position: absolute;
+    top: 0%;
     left: 10%;
     font-size: 10px;
     text-align: center;
@@ -1170,7 +1215,7 @@ h2.footer-top-head-w3l {
 }
 
 .footer-grids ul li i {
-    color: #E53935;					-
+    color: #E53935;					-				/* значки */
     padding-right: 10px;
 }
 
@@ -1179,8 +1224,9 @@ h2.footer-top-head-w3l {
 }
 
 .w3l-middlefooter-sec {
-    background: #616161;
-}
+    background: #333;
+	 padding: 15px;
+	}
 
 /*-- social-icons --*/
 
@@ -1256,18 +1302,19 @@ h2.footer-top-head-w3l {
     display: inline-block;
     background: #ffffff;
     border: none;
-    width: 72%;
+    width: 200px;
     padding: 10px;
     color: #000;
     letter-spacing: 1px;
 }
 
 .w3l-agileits input[type="submit"] {
+	
     outline: none;
     color: #FFFFFF;
     padding: 10px;
     letter-spacing: 1px;
-    width: 18%;
+    width: 50px;
     background: #E53935;      					-					/*--GO---*/
     border: none;
 	cursor: pointer;

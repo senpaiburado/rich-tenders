@@ -1,43 +1,3 @@
-<!-- <div class="row">
-@{foreach m in model.items}
-	<div class="col-md-4">
-		<div class="product" data-new="@{m.pricemin}" data-old="@{m.priceold}" data-currency="@{global.config.currency_entity}">
-			@{if m.isnew}
-				<div class="flags">
-					@{if m.isnew}<span style="background-color:#8CC152">@(NEW)</span>@{fi}
-					@{if m.istop}<span style="background-color:#DA4453">@(TOP)</span>@{fi}
-				</div>
-			@{fi}
-			<a href="@{m.linker}" class="image"><img src="/images/small/@{m.pictures[0]}.jpg" border="0" alt="@{m.name}" /></a>
-			@{if m.size && m.size.length}
-				<div class="sizes">
-					@{foreach a in m.size}
-						<span>@{a}</span>
-					@{end}
-				</div>
-			@{fi}
-			@{m.price}
-			<a href="@{m.linker_category}/" class="category"><i class="fa fa-folder-o"></i>@{m.category}</a>
-			<a href="@{m.linker}" class="name">@{m.name}</a>
-			<a href="@{if !url || url === '/'}@{sitemap_url('category')}@{fi}?manufacturer=@{m.linker_manufacturer}" class="manufacturer">@{m.manufacturer}</a>
-			<div class="price">
-				@{if m.stock}
-					<a href="@{m.linker}" class="more"><i class="fa fa-plus"></i>(Detail)</a>
-				@{else}
-					<span class="outofstock">@(Out of stock)</span>
-				@{fi}
-				<div>@{!m.pricemin.currency()}@{if m.priceold && m.priceold > m.pricemin} <span>@{!m.priceold.currency()}</span>@{fi}</div>
-			</div>
-		</div>
-	</div>
-@{end}
-</div> -->
-
-
-
-<!-- Main css -->
-
-
 <!-- top Products -->
 <div class="ads-grid py-sm-5 py-4">
 	<div class="container py-xl-4 py-lg-2">
@@ -51,12 +11,10 @@
 				<div class="wrapper">
 					<!-- first section -->
 					@{foreach items in model}
-					<script type="text/javascript">console.log("Array")</script>
 					<div class="product-sec1 px-sm-4 px-3 py-sm-5  py-3 mb-4">
 						<h3 class="heading-tittle text-center font-italic">@{items[0].category}</h3>
 						<div class="row">
 							@{foreach item in items}
-							<script type="text/javascript">console.log("Item")</script>
 							<div class="col-md-4 product-men mt-5">
 								<div class="men-pro-item simpleCart_shelfItem">
 									<div class="men-thumb-item text-center">
@@ -67,15 +25,15 @@
 											</div>
 										</div>
 										@{if item.isnew}<span class="product-new-top">New</span>@{fi}
-										@{if item.istop}<span class="product-new-top">Top</span>@{fi}
+										@{if item.istop}<span class="product-new-top4">Top</span>@{fi}
 									</div>
 									<div class="item-info-product text-center border-top mt-4">
 										<h4 class="pt-1">
-											<a href="single.html">@{item.name}</a>
+											<a href="single.html">Samsung Galaxy J7</a>
 										</h4>
 										<div class="info-product-price my-2">
-											<span class="item_price1">@{item.pricemin.currency()}</span>
-											@{if item.priceold && item.priceold < item.pricemin}<del>@{item.priceold.currency()}</del>@{fi}
+
+											<span class="item_price1">$200.00</span>
 										</div>
 										<div class="snipcart-details top_brand_home_details item_add single-item hvr-outline-out">
 											<fieldset>
@@ -95,10 +53,11 @@
 								</div>
 							</div>
 							@{end}
-						</div>
 					</div>
-					@{end}
-					<!-- //fourth section -->
 				</div>
-			</div>
-			<!-- //product left -->
+			@{end}
+			<!-- //fourth section -->
+	<!-- //product left -->
+
+</div>
+</div>
