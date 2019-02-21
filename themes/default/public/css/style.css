@@ -5,8 +5,21 @@ License: Creative Commons Attribution 3.0 Unported
 License URL: http://creativecommons.org/licenses/by/3.0/
 --*/
 /* перехід */
+.terra h1
+{
+	 padding: 10px;
+	 font-size: 115px;
+}
+	
+image2{
+max-width:100px
+}
 .Dno{
 	 text-align: center;
+}
+.Dno2{
+	 text-align: center;
+	 
 }
 .textG a{
 	 padding: 10px;
@@ -311,7 +324,7 @@ input[type="submit"] {
 /*-- logo --*/
 
 .logo_agile h1 a {
-    color: #E53935;															/* НАЗВА КОМП */
+    color: #D32F2F;															/* НАЗВА КОМП */
     font-size: 38px;
     text-decoration: none;
     letter-spacing: 1px;
@@ -564,6 +577,7 @@ h3.tittle-w3l span {
     text-transform: capitalize;
     padding: .5em 2.5em .5em 1em;
     border: 1px solid #fe9126;
+
     margin: .35em 0 0;
     background: url(../images/cart.png) no-repeat 116px 9px;
 }
@@ -671,13 +685,13 @@ h3.tittle-w3l span {
     visibility: hidden;
 }
 
-.product-men:nth-child(3) .product-new-top {
-    background: #FFC107;
-}
+/* .product-men:nth-child(3) .product-new-top { */
+    /* background: #FFC107; */
+/* } */
 
-.product-men:nth-child(4) .product-new-top {
-    background: #219ff3;
-}
+/* .product-men:nth-child(4) .product-new-top { */
+    /* background: #219ff3; */
+/* } */
 .product-new-top1 {																				/*кількість купленого */
     background: #D32F2F;
     color: #fff;
