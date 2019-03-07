@@ -19,7 +19,7 @@
 										<img src="/images/small/@{item.pictures[0]}.jpg" alt="" height="200px">
 										<div class="men-cart-pro">
 											<div class="inner-men-cart-pro">
-												<a href="single.html" class="link-product-add-cart">Quick View</a>
+												<a href="@{sitemap_url('product')}@{item.id}" class="link-product-add-cart">Quick View</a>
 											</div>
 										</div>
 										@{if item.isnew}<span class="product-new-top">New</span>@{fi}
@@ -31,7 +31,7 @@
 										</h4>
 										<div class="info-product-price my-2">
 											<span class="item_price1">@{item.pricemin.currency()}</span>
-											@{if item.priceold && item.priceold < item.pricemin}<del>@{item.priceold.currency()}</del>@{fi}
+											@{if item.priceold && item.priceold > item.pricemin}<del>@{item.priceold.currency()}</del>@{fi}
 										</div>
 										<div class="snipcart-details top_brand_home_details item_add single-item hvr-outline-out">
 											<fieldset>

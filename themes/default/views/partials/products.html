@@ -33,7 +33,7 @@
 										</h4>
 										<div class="info-product-price my-2">
 											<span class="item_price1">@{item.pricemin.currency()}</span>
-											@{if item.priceold && item.priceold < item.pricemin}<del>@{item.priceold.currency()}</del>@{fi}
+											@{if item.priceold && item.priceold > item.pricemin}<del>@{item.priceold.currency()}</del>@{fi}
 										</div>
 										<div class="snipcart-details top_brand_home_details item_add single-item hvr-outline-out">
 											<fieldset>
