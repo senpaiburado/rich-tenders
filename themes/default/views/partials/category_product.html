@@ -2,7 +2,8 @@
 <div class="ads-grid py-sm-5 py-4">
 	<div class="container py-xl-4 py-lg-2">
 		<!-- tittle heading -->
-		<h3 class="tittle-w3l text-center mb-lg-5 mb-sm-4 mb-3">@{model.category_name}</h3>
+		
+		<h3 class="tittle-w3l text-center mb-lg-5 mb-sm-4 mb-3 agileinfo-ads-display col-lg-9">@{model.category_name}</h3>
 		<!-- //tittle heading -->
 		<div class="row">
 			<!-- product left -->
@@ -15,8 +16,8 @@
 							@{foreach item in items}
 							<div class="col-md-4 product-men mt-5">
 								<div class="men-pro-item simpleCart_shelfItem">
-									<div class="men-thumb-item text-center">
-										<img src="/images/small/@{item.pictures[0]}.jpg" alt="" height="200px">
+									<div class="men-thumb-item text-center ">
+										<img src="/images/small/@{item.pictures[0]}.jpg" alt="" height="200px"  width="170px">
 										<div class="men-cart-pro">
 											<div class="inner-men-cart-pro">
 												<a href="@{sitemap_url('product')}@{item.id}" class="link-product-add-cart">Quick View</a>
@@ -40,17 +41,19 @@
 												<input type="hidden" name="business" value=" " />
 												<input type="hidden" name="item_name" value="Samsung Galaxy J7" />
 												<input type="hidden" name="amount" value="200.00" />
-												<input type="hidden" name="discount_amount" value="1.00" />
+												<!---<input type="hidden" name="discount_amount" value="1.00" />
 												<input type="hidden" name="currency_code" value="USD" />
 												<input type="hidden" name="return" value=" " />
 												<input type="hidden" name="cancel_return" value=" " />
-												<input type="submit" name="submit" value="Add to cart" class="button btn" />
+												<input type="submit" name="submit" value="Add to cart" class="button btn" />--->
 											</fieldset>
 										</div>
 									</div>
 								</div>
 							</div>
+							
 							@{end}
+							
 					</div>
 				</div>
 			@{end}
@@ -59,13 +62,14 @@
 
 
 	<!-- //product left -->
-	<div class="paginator item-info-product text-center border-top mt-4">
-
-		<a class="prev disabled" href="#prev"></a>
-		<a class="current" href="#1">1</a>
-		<span>&hellip;</span>
-		<a href="#3">3</a>
-		<a class="next" href="product2.html"></a>
+	<div class="row justify-content-sm-center">
+<div class="paginator Dno2">
+            <a class="prev disabled" href="#prev"></a>
+            <a class="current" href="#1">1</a>
+            <span>&hellip;</span>
+            <a href="#3">3</a>
+            <a class="next" href="product2.html"></a>
+        </div>
+		</div>
 	</div>
-</div>
-</div>
+		</div>

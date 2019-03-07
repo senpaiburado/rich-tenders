@@ -1,6 +1,9 @@
 <!DOCTYPE html>
-<html>
+<html lang="zxx">
+
 <head>
+	<title>Electro Store Ecommerce Category Bootstrap Responsive Web Template | Home :: w3layouts</title>
+	<!-- Meta tag Keywords -->
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta charset="UTF-8" />
 	<meta name="keywords" content="Electro Store Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design"
@@ -17,15 +20,15 @@
 	<!-- //Meta tag Keywords -->
 
 	<!-- Custom-Files -->
-	<link href="/default/css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
+	<link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
 	<!-- Bootstrap css -->
-	<link href="/default/css/style.css" rel="stylesheet" type="text/css" media="all" />
+	<link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
 	<!-- Main css -->
-	<link rel="stylesheet" href="/default/web/css/fontawesome-all.css" media="all">
+	<link rel="stylesheet" href="css/fontawesome-all.css">
 	<!-- Font-Awesome-Icons-CSS -->
-	<link href="/default/css/popuo-box.css" rel="stylesheet" type="text/css" media="all" />
+	<link href="css/popuo-box.css" rel="stylesheet" type="text/css" media="all" />
 	<!-- pop-up-box -->
-	<link href="/default/css/menu.css" rel="stylesheet" type="text/css" media="all" />
+	<link href="css/menu.css" rel="stylesheet" type="text/css" media="all" />
 	<!-- menu style -->
 	<!-- //Custom-Files -->
 
@@ -33,95 +36,11 @@
 	<link href="//fonts.googleapis.com/css?family=Lato:100,100i,300,300i,400,400i,700,700i,900,900i&amp;subset=latin-ext" rel="stylesheet">
 	<link href="//fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i&amp;subset=cyrillic,cyrillic-ext,greek,greek-ext,latin-ext,vietnamese"
 	    rel="stylesheet">
+	<!-- //web fonts -->
+
 </head>
-<body data-jc="exec,binder,modificator">
-	<!-- <br />
-	<div data-jc="loading" class="ui-loading@{if !repository.loading} hidden@{fi}"></div>
-	<div data-jc="shoppingcart" data-jc-path="shoppingcart" data-jc-config="discount:@{if user}@{user.discount}@{else}0@{fi}"></div>
-	<div data-jc="message" data-jc-config="button:@(Close)"></div>
-	<div data-jc="autocomplete"></div>
-
-	<div class="container">
-
-		<div class="relative">
-			<div class="account">
-				@{if user}
-					<a href="@{sitemap_url('account')}" class="b">@{user.name}</a>
-					<a href="@{sitemap_url('settings')}"><i class="fa fa-cog"></i>@(Settings)</a>
-					<a href="@{sitemap_url('logoff')}"><i class="fa fa-sign-out"></i>@(Sign out)</a>
-				@{else}
-					<a href="@{sitemap_url('account')}"><i class="fa fa-lock"></i>@(Sign in)</a>
-				@{fi}
-			</div>
-		</div
-
-		<div class="row">
-			<div class="col-md-3">
-				<section class="categories">
-					<a href="/" class="logo"><img src="/img/logo.png" alt="@{'%name'}" border="0" /></a>
-					<div class="categoriescontainer">
-						<div class="categoriesbody bg-yellow fs12 ui-center m">
-							This is a new version of new <b>Total.js Eshop</b>. This version will be available soon for all Total.js members.
-						</div>
-
-						<div class="categoriesbody npb">
-							<div class="caption">@(We recommend)</div>
-						</div>
-						<nav>
-							@{foreach m in F.global.navigations.panel.children}
-								<a href="@{m.url}"><i class="fa fa-caret-right"></i>@{m.name}</a>
-							@{end}
-							<a href="@{sitemap_url('new')}"><i class="fa fa-caret-right"></i>@(New goods)</a>
-							<a href="@{sitemap_url('top')}"><i class="fa fa-caret-right"></i>@(Top products)</a>
-							<a href="@{sitemap_url('popular')}"><i class="fa fa-caret-right"></i>@(Popular products)<span>@(NEW)</span></a>
-							<a href="@{sitemap_url('category')}"><i class="fa fa-caret-right"></i>@(All products)</a>
-						</nav>
-						<div class="categoriesbody npb">
-							<div class="caption">@(Categories)</div>
-						</div>
-						@{view('partials/categories')}
-					</div>
-					<button id="mainmenu"><i class="fa fa-chevron-down"></i></button>
-				</section>
-			</div>
-			<div class="col-md-9">
-				<section class="body">
-
-					<header>
-						<nav>
-							@{foreach m in F.global.navigations.menu.children}
-								<a href="@{m.url}">@{if m.icon}<i class="fa fa-@{m.icon}"></i>@{fi}@{m.name}</a>
-							@{end}
-						</nav>
-						<div class="shoppingcart" data-m="shoppingcart.sum + shoppingcart">
-							<a href="@{sitemap_url('checkout')}"><b data-b="shoppingcart.sum" data-b-html="'@{global.config.currency_entity}'.format(value ? value.format(2) : (0).format(2))">...</b><span>@(Your shopping cart)</span></a>
-						</div>
-						<form class="search" action="@{sitemap_url('category')}" method="get">
-							<button><i class="fa fa-search"></i></button>
-							<div><input type="text" placeholder="@(Search products ...)" name="q" value="@{query.q}" id="search" autocomplete="off" /></div>
-						</form>
-					</header>
-
-					<nav class="breadcrumb">
-						@{foreach m in sitemap()}
-							@{if m.id === 'category'}
-								<i class="fa fa-caret-right"></i><a href="@{m.url}">@{m.name}</a>
-							@{else}
-								<i class="fa fa-caret-right"></i><a href="@{m.url}">@{m.name}</a>
-							@{fi}
-						@{end}
-					</nav>
-					@{body}
-				</section>
-			</div>
-		</div>
-	</div>
-	<br />
-	<br /> -->
-
-	<script src="@{global.js}"></script>
-	<div data-jc="loading" class="ui-loading@{if !repository.loading} hidden@{fi}"></div>
-
+<body>
+	<!-- top-header -->
 	<div class="agile-main-top">
 		<div class="container-fluid">
 			<div class="row main-top-w3l py-2">
@@ -143,7 +62,7 @@
 						</li>
 						</li>
 						<li class="text-center  text-white">
-							<i class="fas fa-phone mr-6"></i> +972506415604
+							<i class="fas fa-phone mr-2"></i> 001 234 5678
 						</li>
 					</ul>
 					<!-- //header lists -->
@@ -245,8 +164,8 @@
 				<!-- logo -->
 				<div class="col-md-3 logo_agile">
 					<h1 class="text-center">
-						<a href="@{sitemap_url('/')}" class="font-weight-bold font-italic">
-							<img src="/default/web/images/2001.png" alt=" " class="img-fluid1"> RichTenders
+						<a href="index.html" class="font-weight-bold font-italic">
+							<img src="images/2001.png" alt=" " class="img-fluid1"> RichTenders
 						</a>
 					</h1>
 				</div>
@@ -257,13 +176,13 @@
 						<!-- search -->
 						<div class="col-10 agileits_search">
 							<form class="form-inline" action="#" method="post">
-								<input class="form-control mr-sm-2" type="search" placeholder="Your request" aria-label="Search" required>
+								<input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" required>
 								<button class="btn my-2 my-sm-0" type="submit">Search</button>
 							</form>
 						</div>
 						<!-- //search -->
-						<!-- cart details 
-						<div class="col-2 top_nav_right text-center mt-sm-0 mt-2">
+						<!-- cart details -->
+						<div class="col-2 top_nav_right text-center mt-sm-0 mt-0">
 						<span class="product-new-top1 ">12</span>
 							<div class="wthreecartaits wthreecartaits2 cart cart box_1">
 								<form action="#" method="post" class="last">
@@ -289,21 +208,17 @@
 			<nav class="navbar navbar-expand-lg navbar-light bg-light">
 				<div class="agileits-navi_search">
 					<form action="#" method="post">
-						<select id="agileinfo-nav_search" name="agileinfo_search" class="border" onchange="location = this.value" onfocus="this.selectedIndex = -1;">
-							<option disable selected>Category</option>
-							@{if repository.category}
-								@{foreach m in repository.category}
-									@{if m.count}
-										<option value="@{sitemap_url('category')}@{m.linker}">@{m.name}</option>
-									@{fi}
-								@{end}
-							@{else}
-								@{foreach m in global.categories}
-									@{if m.count}
-										<option value="@{sitemap_url('category')}@{m.linker}">@{m.name}</option>
-									@{fi}
-								@{end}
-							@{fi}
+						<select id="agileinfo-nav_search" name="agileinfo_search" class="border" required="">
+							<option value="">All Categories</option>
+							<option value="Televisions">Televisions</option>
+							<option value="Headphones">Headphones</option>
+							<option value="Computers">Computers</option>
+							<option value="Appliances">Appliances</option>
+							<option value="Mobiles">Mobiles</option>
+							<option value="Fruits &amp; Vegetables">Tv &amp; Video</option>
+							<option value="iPad & Tablets">iPad & Tablets</option>
+							<option value="Cameras & Camcorders">Cameras & Camcorders</option>
+							<option value="Home Audio & Theater">Home Audio & Theater</option>
 						</select>
 					</form>
 				</div>
@@ -314,7 +229,7 @@
 				<div class="collapse navbar-collapse" id="navbarSupportedContent">
 					<ul class="navbar-nav ml-auto text-center mr-xl-5">
 						<li class="nav-item active mr-lg-2 mb-lg-0 mb-2">
-							<a class="nav-link" href="@{sitemap_url('homepage')}">Home
+							<a class="nav-link" href="index.html">Home
 								<span class="sr-only">(current)</span>
 							</a>
 						</li>
@@ -461,7 +376,7 @@
 							</div>
 						</li>
 						<li class="nav-item mr-lg-2 mb-lg-0 mb-2">
-							<a class="nav-link" href="@{sitemap_url('about')}">About Us</a>
+							<a class="nav-link" href="about.html">About Us</a>
 						</li>
 						<li class="nav-item mr-lg-2 mb-lg-0 mb-2">
 							<a class="nav-link" href="product.html">New Arrivals</a>
@@ -482,7 +397,7 @@
 							</div>
 						</li>
 						<li class="nav-item">
-							<a class="nav-link" href="@{sitemap_url('contact')}">Contact Us</a>
+							<a class="nav-link" href="contact.html">Contact Us</a>
 						</li>
 					</ul>
 				</div>
@@ -490,160 +405,40 @@
 		</div>
 	</div>
 	
-
-	<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-		<!-- Indicators-->
-		<div class="carousel-inner">
-			<div class="carousel-item item1 active">
-				<div class="container">
-					<div class="w3l-space-banner">
-						<!---<div class="carousel-caption p-lg-5 p-sm-4 p-3">
-							<p>Get flat
-								<span>10%</span> Cashback</p>
-							<h3 class="font-weight-bold pt-2 pb-lg-5 pb-4">The
-								<span>Big</span>
-								Sale
-							</h3>
-							<a class="button2" href="product.html">Shop Now </a>
-						</div>-->
-					</div>
+	<!-- //navigation -->	
+	<div class=" ">
+	<h3 class="tittle-w3l text-center mb-3">Edit</h3>
+<div class="modal-body text-center  brd">
+					<form action="#" method="post">
+						<div class="form-group mb-0">
+							<label class="col-form-label">Your Name</label>
+					
+						</div>
+						<div class="terra">
+						<input type="password" class="form-control" placeholder=" " name="Password" required="">
+						</div>
+						<form action="#" method="post">
+						<div class="form-group  mb-0">
+							<label class="col-form-label">Email</label>
+							</div>
+							<input type="password" class="form-control" placeholder=" " name="Password" required="">
+							
+							
+						<div class="form-group mb-1">
+							<label class="col-form-label ">Password</label>
+							<input type="password" class="form-control" placeholder=" " name="Password" required="">
+						</div>
+						<div class="right-w3l">
+							<input type="submit" class="form-control"  value="Ubdate" >
+						</div>
+						</div>
+				
+						<div class="sub-w3l">
+							<div class="custom-control custom-checkbox mr-sm-2">
+								<input type="checkbox" class="custom-control-input" id="customControlAutosizing">
+								<!---<label class="custom-control-label" for="customControlAutosizing">Remember me?</label>
+							</div>
+						</div>--->
+						
+					</form>
 				</div>
-			</div>
-			
-		</div>
-
-	</div>
-
-	@{body}
-	@{view('partials/footer')}
-
-	<script src="/default/web/js/jquery-2.2.3.min.js"></script>
-
-	<script>
-		$(document).ready(function () {
-			$(".dropdown").hover(
-				function () {
-					$('.dropdown-menu', this).stop(true, true).slideDown("fast");
-					$(this).toggleClass('open');
-				},
-				function () {
-					$('.dropdown-menu', this).stop(true, true).slideUp("fast");
-					$(this).toggleClass('open');
-				}
-			);
-		});
-	</script>
-	<!-- //nav smooth scroll -->
-
-	<!-- popup modal (for location)-->
-	<script src="/default/web/js/jquery.magnific-popup.js"></script>
-	<script>
-		$(document).ready(function () {
-			$('.popup-with-zoom-anim').magnificPopup({
-				type: 'inline',
-				fixedContentPos: false,
-				fixedBgPos: true,
-				overflowY: 'auto',
-				closeBtnInside: true,
-				preloader: false,
-				midClick: true,
-				removalDelay: 300,
-				mainClass: 'my-mfp-zoom-in'
-			});
-
-		});
-	</script>
-	<!-- //popup modal (for location)-->
-
-	<!-- cart-js -->
-	<script src="/default/web/js/minicart.js"></script>
-	<script>
-		paypals.minicarts.render(); //use only unique class names other than paypals.minicarts.Also Replace same class name in css and minicart.min.js
-
-		paypals.minicarts.cart.on('checkout', function (evt) {
-			var items = this.items(),
-				len = items.length,
-				total = 0,
-				i;
-
-			// Count the number of each item in the cart
-			for (i = 0; i < len; i++) {
-				total += items[i].get('quantity');
-			}
-
-			if (total < 3) {
-				alert('The minimum order quantity is 3. Please add more to your shopping cart before checking out');
-				evt.preventDefault();
-			}
-		});
-	</script>
-	<!-- //cart-js -->
-
-	<!-- password-script -->
-	<script>
-		window.onload = function () {
-			document.getElementById("password1").onchange = validatePassword;
-			document.getElementById("password2").onchange = validatePassword;
-		}
-
-		function validatePassword() {
-			var pass2 = document.getElementById("password2").value;
-			var pass1 = document.getElementById("password1").value;
-			if (pass1 != pass2)
-				document.getElementById("password2").setCustomValidity("Passwords Don't Match");
-			else
-				document.getElementById("password2").setCustomValidity('');
-			//empty string means no validation error
-		}
-	</script>
-	<!-- //password-script -->
-	
-	<!-- scroll seller -->
-	<script src="/default/web/js/scroll.js"></script>
-	<!-- //scroll seller -->
-
-	<!-- smoothscroll -->
-	<script src="/default/web/js/SmoothScroll.min.js"></script>
-	<!-- //smoothscroll -->
-
-	<!-- start-smooth-scrolling -->
-	<script src="/default/web/js/move-top.js"></script>
-	<script src="/default/web/js/easing.js"></script>
-	<script>
-		jQuery(document).ready(function ($) {
-			$(".scroll").click(function (event) {
-				event.preventDefault();
-
-				$('html,body').animate({
-					scrollTop: $(this.hash).offset().top
-				}, 1000);
-			});
-		});
-	</script>
-	<!-- //end-smooth-scrolling -->
-
-	<!-- smooth-scrolling-of-move-up -->
-	<script>
-		$(document).ready(function () {
-			/*
-			var defaults = {
-				containerID: 'toTop', // fading element id
-				containerHoverID: 'toTopHover', // fading element hover id
-				scrollSpeed: 1200,
-				easingType: 'linear' 
-			};
-			*/
-			$().UItoTop({
-				easingType: 'easeOutQuart'
-			});
-		});
-	</script>
-	<!-- //smooth-scrolling-of-move-up -->
-
-	<!-- for bootstrap working -->
-	<script src="/default/web/js/bootstrap.js"></script>
-
-	
-
-</body>
-</html>
