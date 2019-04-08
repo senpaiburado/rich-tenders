@@ -18,7 +18,6 @@ function view_main_page() {
 	NOSQL("products").find().make(function(builder) {
 		builder.callback(function(err, result) {
 			if (err) {
-				console.log(err);
 				return;
 			}
 
@@ -44,7 +43,6 @@ function view_main_page() {
 				}
 			}
 
-			console.log(arr.length);
 
 			self.sitemap();
 			self.view("index", arr);

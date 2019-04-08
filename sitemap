@@ -11,6 +11,7 @@ admin             : @(Admin)               --> @(/admin/*)
 // Eshop
 checkout          : @(Checkout)            --> @(/checkout/)            --> homepage
 category          : @(All products)        --> @(/categories/*)         --> homepage
+product           : @(Product)             --> @(/product/*)            --> homepage
 detail            : @(Product detail)      --> @(/detail/{0}/)          --> category
 top               : @(Top products)        --> @(/top/)                 --> homepage
 new               : @(New products)        --> @(/new/)                 --> homepage
@@ -19,4 +20,4 @@ account           : @(My account)          --> @(/account/)             --> home
 order             : @(Order detail)        --> @(/checkout/{0}/)        --> account
 settings          : @(Account settings)    --> @(/account/settings/)    --> account
 logoff            : @(Logoff)              --> @(/logoff/)              --> homepage
-contact           : @(Contact)             --> @(/contact/)             --> homepage
+contact           : @(Contact)             --> @(/contact/)             --> homepage                                                                                                                                                            

@@ -44,6 +44,7 @@ $(document).ready(function() {
 		var btn = $(this);
 		SETTER('shoppingcart', 'add', btn.attrd('id'), +btn.attrd('price'), 1, btn.attrd('name'), btn.attrd('idvariant'), btn.attrd('variant'));
 		setTimeout(refresh_addcart, 200);
+		console.log("SHOOOP");
 	});
 
 	$(document).on('focus', '#search', function() {
@@ -96,13 +97,15 @@ function refresh_addcart() {
 	var com = FIND('shoppingcart');
 	$('.addcart').each(function() {
 		var el = $(this);
-		com.has(el) && el.aclass('is').find('.fa').rclass2('fa-').aclass('fa-check-circle');
+		console.log(el);
+		el.aclass('is').find('.fa').rclass2('fa-').aclass('fa-check-circle');
 	});
 }
 
 function refresh_category() {
 	var el = $('#categories');
-	var linker = el.attrd('url');
+	console.log("JQUERY = ", el.attr);
+	var linker = el.attr('url');
 	el.find('a').each(function() {
 		var el = $(this);
 		if (linker.indexOf(el.attr('href')) !== -1) {

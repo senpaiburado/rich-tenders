@@ -28,9 +28,6 @@ NEWSCHEMA('User').make(function(schema) {
 	schema.define('lastname', 'Capitalize(50)');
 	schema.define('phone', 'Phone');
 	schema.define('email', 'Email');
-	schema.define('gender', ['male', 'female']);
-	schema.define('discount', Number);
-	schema.define('isblocked', Boolean);
 	schema.define('isconfirmed', Boolean);
 
 	// Gets a specific user
@@ -140,7 +137,7 @@ NEWSCHEMA('User').make(function(schema) {
 NEWSCHEMA('UserSettings').make(function(schema) {
 
 	schema.define('name', 'String(100)', true);
-	schema.define('firstname', 'Capitalize(50)', true);
+	schema.define('fullname', 'Capitalize(50)', true);
 	schema.define('lastname', 'Capitalize(50)', true);
 	schema.define('email', 'Email', true);
 	schema.define('phone', 'Phone');

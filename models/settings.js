@@ -20,9 +20,10 @@ NEWSCHEMA('Settings').make(function(schema) {
 	schema.define('currency_entity', String);
 	schema.define('emailcontactform', 'Email', true);
 	schema.define('emailorderform', 'Email', true);
-	schema.define('emailreply', 'Email', true);
-	schema.define('emailsender', 'Email', true);
+	schema.define('address', 'String', true);
+	schema.define('phonenumber', 'String', true);
 	schema.define('emailuserform', 'Email', true);
+	schema.define('shoppingenabled', Boolean);
 	schema.define('url', 'Url', true);
 	schema.define('templates', '[SettingsKeyValue]');
 	schema.define('templatesposts', '[SettingsKeyValue]');

@@ -1,0 +1,635 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="1fd9eb7d-f4a0-46ae-b76a-02a05e43089b" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/controllers/eshop.js" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/eshop.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/databases/files-binary/meta.json" beforeDir="false" afterPath="$PROJECT_DIR$/databases/files-binary/meta.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/databases/products.nosql" beforeDir="false" afterPath="$PROJECT_DIR$/databases/products.nosql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/databases/products.nosql-log" beforeDir="false" afterPath="$PROJECT_DIR$/databases/products.nosql-log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/databases/settings.json" beforeDir="false" afterPath="$PROJECT_DIR$/databases/settings.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/databases/settings_backup.nosql" beforeDir="false" afterPath="$PROJECT_DIR$/databases/settings_backup.nosql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/databases/visitors.cache" beforeDir="false" afterPath="$PROJECT_DIR$/databases/visitors.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/databases/visitors.nosql" beforeDir="false" afterPath="$PROJECT_DIR$/databases/visitors.nosql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/databases/widgets.nosql" beforeDir="false" afterPath="$PROJECT_DIR$/databases/widgets.nosql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/debug.pid" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/products.js" beforeDir="false" afterPath="$PROJECT_DIR$/models/products.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/settings.js" beforeDir="false" afterPath="$PROJECT_DIR$/models/settings.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/favicon.ico" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/img/logo.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sitemap" beforeDir="false" afterPath="$PROJECT_DIR$/sitemap" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/themes/admin/public/forms/settings-admin.html" beforeDir="false" afterPath="$PROJECT_DIR$/themes/admin/public/forms/settings-admin.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/themes/admin/public/templates/settings.html" beforeDir="false" afterPath="$PROJECT_DIR$/themes/admin/public/templates/settings.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/themes/default/public/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/themes/default/public/css/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/themes/default/public/web/single.html" beforeDir="false" afterPath="$PROJECT_DIR$/themes/default/public/web/single.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/themes/default/views/eshop/contact.html" beforeDir="false" afterPath="$PROJECT_DIR$/themes/default/views/eshop/contact.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/themes/default/views/eshop/product.html" beforeDir="false" afterPath="$PROJECT_DIR$/themes/default/views/eshop/product.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/themes/default/views/layout.html" beforeDir="false" afterPath="$PROJECT_DIR$/themes/default/views/layout.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/themes/default/views/partials/category_product.html" beforeDir="false" afterPath="$PROJECT_DIR$/themes/default/views/partials/category_product.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/themes/default/views/partials/footer.html" beforeDir="false" afterPath="$PROJECT_DIR$/themes/default/views/partials/footer.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/themes/default/views/partials/products.html" beforeDir="false" afterPath="$PROJECT_DIR$/themes/default/views/partials/products.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/default-css-editor.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/default-css-style.css" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/default-css-style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/default-web-js-minicart.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/file01245546269.gz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/file01341678475.gz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/file01747183980.gz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/file02033537404.gz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/file0209278306.gz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/file0280346281.gz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/file0514829876.gz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/file0815998773.gz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/file1568305227.gz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/file1873082715.gz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/file1960131371.gz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/file234062754.gz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/file293689257.gz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/file398212768.gz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/file473835201.gz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/file562146810.gz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/file566873371.gz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/file710870642.gz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/file753573542.gz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/file939686014.gz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/images-small-1611262202Tkvs19.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/images-small-1611262202Tkvs19.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/images-small-1611262223Tpu112.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/images-small-1611262223Tpu112.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/images-small-1611262232T4433i.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/images-small-1611262232T4433i.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/images-small-1611262242T1d7q6.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/images-small-1611262242T1d7q6.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/images-small-1611262252Tzj817.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/images-small-1611262252Tzj817.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/images-small-1611262300Tonf16.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/images-small-1611262313T8tbyl.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/images-small-1611262318Tufbw9.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/images-small-1611262325Tu4tke.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/images-small-1611262359Ta2v65.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/images-small-1611262359Ta2v65.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/images-small-1611270001Tb1gpe.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/images-small-1611270001Tb1gpe.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/images-small-1611270911Tm8m2j.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/images-small-1611270915Tq9ceo.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/images-small-1611270920Tdyznx.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/images-small-1611270925T1hqh9.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/images-small-1611270935Tzzei5.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/images-small-1611270939Tnr479.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/images-small-1611270945Tkp1cf.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/images-small-1611270951T7psal.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/images-small-1611270954Tyii51.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/images-small-1611271002T96ob6.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/images-small-1611271002T96ob6.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/images-small-1611271007Twyhfp.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/images-small-1611271007Twyhfp.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/images-small-1611271010Tsbkwf.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/images-small-B20190219T000000001.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/images-small-B20190219T000000002.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/merged_admin-admin.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/merged_admin-admin.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/merged_default-css-default.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/widgets.css" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/widgets.css" afterDir="false" />
+    </list>
+    <ignored path="$PROJECT_DIR$/.tmp/" />
+    <ignored path="$PROJECT_DIR$/temp/" />
+    <ignored path="$PROJECT_DIR$/tmp/" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/themes/admin/public/templates/settings.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="390">
+              <caret line="26" column="73" selection-start-line="26" selection-start-column="66" selection-end-line="26" selection-end-column="73" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/themes/admin/public/admin.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <caret column="16" selection-start-column="16" selection-end-column="16" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/themes/default/views/layout.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="8655">
+              <caret line="577" column="4" selection-start-line="577" selection-start-column="4" selection-end-line="577" selection-end-column="4" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/themes/default/views/partials/footer.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="450">
+              <caret line="30" column="102" selection-start-line="30" selection-start-column="102" selection-end-line="30" selection-end-column="102" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/themes/default/views/eshop/contact.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1020">
+              <caret line="68" column="136" selection-start-line="68" selection-start-column="136" selection-end-line="68" selection-end-column="136" />
+              <folding>
+                <element signature="n#style#0;n#div#1;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#1;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#small#0;n#div#0;n#div#1;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/themes/default/views/eshop/product.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="300">
+              <caret line="20" column="42" selection-start-line="20" selection-start-column="42" selection-end-line="20" selection-end-column="42" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/controllers/eshop.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="480">
+              <caret line="32" column="21" selection-start-line="32" selection-start-column="21" selection-end-line="32" selection-end-column="21" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$USER_HOME$/Knight/index.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="450">
+              <caret line="30" column="7" selection-start-line="30" selection-start-column="7" selection-end-line="30" selection-end-column="7" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$USER_HOME$/ied/IED/public/stylesheets/style.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="11520">
+              <caret line="99" column="29" selection-start-line="99" selection-start-column="29" selection-end-line="99" selection-end-column="29" />
+              <caret line="282" column="29" selection-start-line="282" selection-start-column="29" selection-end-line="282" selection-end-column="29" />
+              <caret line="285" column="29" selection-start-line="285" selection-start-column="29" selection-end-line="285" selection-end-column="29" />
+              <caret line="288" column="29" selection-start-line="288" selection-start-column="29" selection-end-line="288" selection-end-column="29" />
+              <caret line="403" column="29" selection-start-line="403" selection-start-column="29" selection-end-line="403" selection-end-column="29" />
+              <caret line="593" column="29" selection-start-line="593" selection-start-column="29" selection-end-line="593" selection-end-column="29" />
+              <caret line="616" column="29" selection-start-line="616" selection-start-column="29" selection-end-line="616" selection-end-column="29" />
+              <caret line="768" column="29" selection-start-line="768" selection-start-column="29" selection-end-line="768" selection-end-column="29" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/themes/default/views/partials/category_product.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <caret column="21" selection-start-column="21" selection-end-column="21" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>popup-with-zoom-anim</find>
+      <find>men-cart-pro</find>
+      <find>imageZoom</find>
+      <find>facebook</find>
+      <find>.faceboo</find>
+      <find>title</find>
+      <find>img/</find>
+    </findStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/models/products.js" />
+        <option value="$PROJECT_DIR$/themes/default/public/web/single.html" />
+        <option value="$PROJECT_DIR$/themes/default/views/partials/category_product.html" />
+        <option value="$PROJECT_DIR$/themes/default/public/css/style.css" />
+        <option value="$PROJECT_DIR$/themes/default/views/partials/products.html" />
+        <option value="$PROJECT_DIR$/themes/admin/views/index.html" />
+        <option value="$PROJECT_DIR$/themes/admin/public/forms/settings-admin.html" />
+        <option value="$PROJECT_DIR$/themes/admin/public/templates/settings.html" />
+        <option value="$PROJECT_DIR$/models/settings.js" />
+        <option value="$PROJECT_DIR$/themes/default/views/partials/footer.html" />
+        <option value="$PROJECT_DIR$/themes/default/views/eshop/contact.html" />
+        <option value="$PROJECT_DIR$/themes/default/views/eshop/product.html" />
+        <option value="$PROJECT_DIR$/themes/default/views/layout.html" />
+        <option value="$PROJECT_DIR$/controllers/eshop.js" />
+        <option value="$USER_HOME$/Knight/css/style.css" />
+        <option value="$USER_HOME$/ied/IED/public/stylesheets/style.css" />
+        <option value="$USER_HOME$/Knight/index.html" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="y" value="30" />
+    <option name="width" value="1316" />
+    <option name="height" value="1003" />
+  </component>
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="online_shop" type="b2602c69:ProjectViewProjectNode" />
+              <item name="online_shop" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="online_shop" type="b2602c69:ProjectViewProjectNode" />
+              <item name="online_shop" type="462c0819:PsiDirectoryNode" />
+              <item name="controllers" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="online_shop" type="b2602c69:ProjectViewProjectNode" />
+              <item name="online_shop" type="462c0819:PsiDirectoryNode" />
+              <item name="models" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="online_shop" type="b2602c69:ProjectViewProjectNode" />
+              <item name="online_shop" type="462c0819:PsiDirectoryNode" />
+              <item name="themes" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="online_shop" type="b2602c69:ProjectViewProjectNode" />
+              <item name="online_shop" type="462c0819:PsiDirectoryNode" />
+              <item name="themes" type="462c0819:PsiDirectoryNode" />
+              <item name="default" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="online_shop" type="b2602c69:ProjectViewProjectNode" />
+              <item name="online_shop" type="462c0819:PsiDirectoryNode" />
+              <item name="themes" type="462c0819:PsiDirectoryNode" />
+              <item name="default" type="462c0819:PsiDirectoryNode" />
+              <item name="public" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="online_shop" type="b2602c69:ProjectViewProjectNode" />
+              <item name="online_shop" type="462c0819:PsiDirectoryNode" />
+              <item name="themes" type="462c0819:PsiDirectoryNode" />
+              <item name="default" type="462c0819:PsiDirectoryNode" />
+              <item name="public" type="462c0819:PsiDirectoryNode" />
+              <item name="css" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="online_shop" type="b2602c69:ProjectViewProjectNode" />
+              <item name="online_shop" type="462c0819:PsiDirectoryNode" />
+              <item name="themes" type="462c0819:PsiDirectoryNode" />
+              <item name="default" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="online_shop" type="b2602c69:ProjectViewProjectNode" />
+              <item name="online_shop" type="462c0819:PsiDirectoryNode" />
+              <item name="themes" type="462c0819:PsiDirectoryNode" />
+              <item name="default" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+              <item name="eshop" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="online_shop" type="b2602c69:ProjectViewProjectNode" />
+              <item name="online_shop" type="462c0819:PsiDirectoryNode" />
+              <item name="themes" type="462c0819:PsiDirectoryNode" />
+              <item name="default" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+              <item name="partials" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="Scope" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="editor.config.ad.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/debug.js" />
+    <property name="nodejs_package_manager_path" value="npm" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager">
+    <configuration name="debug.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="debug.js" working-dir="$PROJECT_DIR$">
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Node.js.debug.js" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="1fd9eb7d-f4a0-46ae-b76a-02a05e43089b" name="Default Changelist" comment="" />
+      <created>1551942873591</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1551942873591</updated>
+      <workItem from="1551942878772" duration="3102000" />
+      <workItem from="1552306448286" duration="10555000" />
+      <workItem from="1552472374034" duration="14714000" />
+      <workItem from="1552550300428" duration="1922000" />
+      <workItem from="1552565584347" duration="729000" />
+      <workItem from="1552679756326" duration="14062000" />
+      <workItem from="1552755411211" duration="21000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="45105000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="0" y="30" width="1920" height="1050" extended-state="6" />
+    <layout>
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.18133895" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="npm" order="2" side_tool="true" />
+      <window_info id="Favorites" order="3" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32899022" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.34636265" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.3995657" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="8" />
+      <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
+      <window_info anchor="bottom" id="Terminal" order="10" weight="0.32899022" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+    </layout>
+    <layout-to-restore>
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.18133895" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="npm" order="2" side_tool="true" />
+      <window_info id="Favorites" order="3" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32899022" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.32899022" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.3995657" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="8" />
+      <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
+      <window_info anchor="bottom" id="Terminal" order="10" weight="0.32899022" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+    </layout-to-restore>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/debug.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/node_modules/total.js/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="5565">
+          <caret line="390" column="42" selection-start-line="390" selection-start-column="42" selection-end-line="390" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/themes/default/views/eshop/account.html">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/controllers/api.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/controllers/files.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/models/products.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="569">
+          <caret line="158" column="22" selection-start-line="158" selection-start-column="22" selection-end-line="158" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/themes/default/public/web/product.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-14236" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/controllers/default.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/themes/default/public/web/single.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-90">
+          <caret line="792" column="40" selection-start-line="792" selection-start-column="40" selection-end-line="792" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/themes/default/views/eshop/category.html">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/themes/default/views/partials/products.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="19" column="124" selection-start-line="19" selection-start-column="124" selection-end-line="19" selection-end-column="124" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/themes/admin/public/forms/widgets-globals.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="480">
+          <caret line="47" lean-forward="true" selection-start-line="47" selection-end-line="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/themes/admin/public/forms/cmseditor-settings.html">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/themes/admin/public/components/cmseditor.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1080">
+          <folding>
+            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="e#6#10#0" expanded="true" />
+            <element signature="e#13#17#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/themes/admin/views/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="62" column="20" selection-start-line="62" selection-start-column="20" selection-end-line="62" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/themes/admin/index.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/models/contacts.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="480">
+          <caret line="32" column="3" selection-start-line="32" selection-start-column="3" selection-end-line="32" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/models/settings.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="20" column="35" selection-start-line="20" selection-start-column="19" selection-end-line="20" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/themes/admin/public/forms/settings-admin.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="9" column="130" selection-start-line="9" selection-start-column="130" selection-end-line="9" selection-end-column="130" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/themes/default/public/css/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="12450">
+          <caret line="830" selection-start-line="830" selection-end-line="830" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/controllers/admin.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-945" />
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Knight/css/font-awesome.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="281">
+          <caret line="629" column="12" selection-start-line="629" selection-start-column="4" selection-end-line="629" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Knight/css/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="326">
+          <caret line="676" column="19" selection-start-line="676" selection-start-column="19" selection-end-line="676" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/themes/admin/public/templates/settings.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="390">
+          <caret line="26" column="73" selection-start-line="26" selection-start-column="66" selection-end-line="26" selection-end-column="73" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/themes/admin/public/admin.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="16" selection-start-column="16" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/themes/default/views/layout.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="8655">
+          <caret line="577" column="4" selection-start-line="577" selection-start-column="4" selection-end-line="577" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/themes/default/views/partials/footer.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="450">
+          <caret line="30" column="102" selection-start-line="30" selection-start-column="102" selection-end-line="30" selection-end-column="102" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/themes/default/views/eshop/contact.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1020">
+          <caret line="68" column="136" selection-start-line="68" selection-start-column="136" selection-end-line="68" selection-end-column="136" />
+          <folding>
+            <element signature="n#style#0;n#div#1;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#1;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#small#0;n#div#0;n#div#1;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/themes/default/views/eshop/product.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="20" column="42" selection-start-line="20" selection-start-column="42" selection-end-line="20" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/controllers/eshop.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="480">
+          <caret line="32" column="21" selection-start-line="32" selection-start-column="21" selection-end-line="32" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/ied/IED/public/stylesheets/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="11520">
+          <caret line="99" column="29" selection-start-line="99" selection-start-column="29" selection-end-line="99" selection-end-column="29" />
+          <caret line="282" column="29" selection-start-line="282" selection-start-column="29" selection-end-line="282" selection-end-column="29" />
+          <caret line="285" column="29" selection-start-line="285" selection-start-column="29" selection-end-line="285" selection-end-column="29" />
+          <caret line="288" column="29" selection-start-line="288" selection-start-column="29" selection-end-line="288" selection-end-column="29" />
+          <caret line="403" column="29" selection-start-line="403" selection-start-column="29" selection-end-line="403" selection-end-column="29" />
+          <caret line="593" column="29" selection-start-line="593" selection-start-column="29" selection-end-line="593" selection-end-column="29" />
+          <caret line="616" column="29" selection-start-line="616" selection-start-column="29" selection-end-line="616" selection-end-column="29" />
+          <caret line="768" column="29" selection-start-line="768" selection-start-column="29" selection-end-line="768" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/themes/default/views/partials/category_product.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="21" selection-start-column="21" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Knight/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="450">
+          <caret line="30" column="7" selection-start-line="30" selection-start-column="7" selection-end-line="30" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>

@@ -52,16 +52,20 @@ NEWSCHEMA('Product').make(function(schema) {
 			opt.stock && filter.adminFilter('stock', opt, Number);
 			opt.pricemin && filter.adminFilter('pricemin', opt, Number);
 		} else {
-			opt.category && filter.like('linker_category', opt.category, 'beg');
-			opt.manufacturer && filter.where('linker_manufacturer', opt.manufacturer);
-			opt.size && filter.in('size', opt.size);
-			opt.color && filter.in('color', opt.color);
-			opt.stock && filter.where('stock', '>', 0);
-			opt.published && filter.where('ispublished', true);
-			opt.search && filter.like('search', opt.search.keywords(true, true));
-			opt.skip && filter.where('id', '<>', opt.skip);
-			opt.isnew && filter.where('isnew', true);
-			opt.istop && filter.where('istop', true);
+			if (opt.id)
+				opt.id && filter.where('id', opt.id);
+			else {
+				opt.category && filter.like('linker_category', opt.category, 'beg');
+				opt.manufacturer && filter.where('linker_manufacturer', opt.manufacturer);
+				opt.size && filter.in('size', opt.size);
+				opt.color && filter.in('color', opt.color);
+				opt.stock && filter.where('stock', '>', 0);
+				opt.published && filter.where('ispublished', true);
+				opt.search && filter.like('search', opt.search.keywords(true, true));
+				opt.skip && filter.where('id', '<>', opt.skip);
+				opt.isnew && filter.where('isnew', true);
+				opt.istop && filter.where('istop', true);
+			}
 		}
 
 		if (opt.sort)
@@ -69,7 +73,7 @@ NEWSCHEMA('Product').make(function(schema) {
 		else
 			filter.sort('datecreated', true);
 
-		filter.fields('id', 'linker', 'linker_category', 'linker_manufacturer', 'category', 'manufacturer', 'name', 'pricemin', 'priceold', 'isnew', 'istop', 'pictures', 'availability', 'datecreated', 'ispublished', 'signals', 'size', 'stock', 'color');
+		filter.fields('id', 'linker', 'linker_category', 'description', 'body', 'linker_manufacturer', 'category', 'manufacturer', 'name', 'pricemin', 'priceold', 'isnew', 'istop', 'pictures', 'availability', 'datecreated', 'ispublished', 'signals', 'size', 'stock', 'color');
 		filter.callback(function(err, docs, count) {
 			!isAdmin && prepare_links(docs);
 			$.callback(filter.adminOutput(docs, count));
@@ -125,6 +129,8 @@ NEWSCHEMA('Product').make(function(schema) {
 		model.linker_manufacturer = model.manufacturer ? model.manufacturer.slug() : '';
 		model.linker_category = category.linker;
 		model.category = category.name;
+
+
 		model.search = (model.name + ' ' + (model.manufacturer || '') + ' ' + (model.reference || '')).keywords(true, true).join(' ').max(500);
 		model.body = model.template ? U.minifyHTML(model.body) : '';
 
@@ -146,7 +152,6 @@ NEWSCHEMA('Product').make(function(schema) {
 		var nosql = NOSQL('products');
 		var builder = nosql.one();
 		var isAdmin = $.controller ? $.controller.name === 'admin' : false;
-
 		options.category && builder.where('linker_category', options.category);
 		options.linker && builder.where('linker', options.linker);
 		options.id && builder.where('id', options.id);
@@ -626,7 +631,7 @@ function prepare_links(items) {
 			item.linker = linker_detail.url.format(item.linker);
 		if (linker_category)
 			item.linker_category = linker_category.url + item.linker_category;
-		item.body = undefined;
+		//item.body = undefined;
 	}
 }
 

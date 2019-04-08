@@ -1,3 +1,4 @@
+
 COMPONENT('enter', 'validate:true', function(self, config) {
 	self.readonly();
 	self.make = function() {
@@ -466,6 +467,7 @@ COMPONENT('modificator', function(self) {
 
 		$(document).on('click', '.modify', function() {
 			var el = $(this);
+			console.log(el);
 			self.click(el.attrd('m'), el.attrd('m-schema'));
 		});
 	};
@@ -545,6 +547,7 @@ COMPONENT('modificator', function(self) {
 		self.find('[data-m]').each(function() {
 
 			var el = $(this);
+			console.log(el);
 			var path = (el.attrd('m') || '').replace('%', 'jctmp.');
 			var p = '';
 			var schema = '';
@@ -770,7 +773,7 @@ COMPONENT('textarea', function(self, config) {
 COMPONENT('validation', 'delay:100;flags:visible', function(self, config) {
 
 	var path, elements = null;
-	var def = 'button[name="submit"]';
+	var def = 'input[name="submit"]';
 	var flags = null;
 
 	self.readonly();
@@ -972,6 +975,7 @@ COMPONENT('textbox', function(self, config) {
 		else
 			value = value.toString();
 
+			console.log(value);
 		EMIT('reflow', self.name);
 
 		switch (self.type) {
@@ -1056,7 +1060,8 @@ COMPONENT('textbox', function(self, config) {
 		attrs.attr('data-jc-bind', '');
 
 		config.autofill && attrs.attr('name', self.path.replace(/\./g, '_'));
-		config.align && attrs.attr('class', 'ui-' + config.align);
+		//config.align && attrs.attr('class', 'ui-' + config.align);
+		attrs.attr('class', 'form-control');
 		!isMOBILE && config.autofocus && attrs.attr('autofocus');
 
 		builder.push('<input {0} />'.format(attrs.join(' ')));
@@ -1189,6 +1194,7 @@ COMPONENT('error', function(self, config) {
 	};
 
 	self.setter = function(value) {
+		console.log("Setter", value);
 
 		if (!(value instanceof Array) || !value.length) {
 			self.tclass('hidden', true);

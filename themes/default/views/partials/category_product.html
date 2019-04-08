@@ -17,7 +17,7 @@
 							<div class="col-md-4 product-men mt-5">
 								<div class="men-pro-item simpleCart_shelfItem">
 									<div class="men-thumb-item text-center ">
-										<img src="/images/small/@{item.pictures[0]}.jpg" alt="" height="200px"  width="170px">
+										<img src="/images/large/@{item.pictures[0]}.jpg" alt="" height="150px"  width="170px">
 										<div class="men-cart-pro">
 											<div class="inner-men-cart-pro">
 												<a href="@{sitemap_url('product')}@{item.id}" class="link-product-add-cart">Quick View</a>
@@ -28,25 +28,11 @@
 									</div>
 									<div class="item-info-product text-center border-top mt-4">
 										<h4 class="pt-1">
-											<a href="single.html">@{item.name}</a>
+											<a href="@{sitemap_url('product')}@{item.id}">@{item.name}</a>
 										</h4>
 										<div class="info-product-price my-2">
 											<span class="item_price1">@{item.pricemin.currency()}</span>
 											@{if item.priceold && item.priceold > item.pricemin}<del>@{item.priceold.currency()}</del>@{fi}
-										</div>
-										<div class="snipcart-details top_brand_home_details item_add single-item hvr-outline-out">
-											<fieldset>
-												<input type="hidden" name="cmd" value="_cart" />
-												<input type="hidden" name="add" value="1" />
-												<input type="hidden" name="business" value=" " />
-												<input type="hidden" name="item_name" value="Samsung Galaxy J7" />
-												<input type="hidden" name="amount" value="200.00" />
-												<!---<input type="hidden" name="discount_amount" value="1.00" />
-												<input type="hidden" name="currency_code" value="USD" />
-												<input type="hidden" name="return" value=" " />
-												<input type="hidden" name="cancel_return" value=" " />
-												<input type="submit" name="submit" value="Add to cart" class="button btn" />--->
-											</fieldset>
 										</div>
 									</div>
 								</div>
@@ -62,14 +48,26 @@
 
 
 	<!-- //product left -->
-	<div class="row justify-content-sm-center">
-<div class="paginator Dno2">
-            <a class="prev disabled" href="#prev"></a>
-            <a class="current" href="#1">1</a>
-            <span>&hellip;</span>
-            <a href="#3">3</a>
-            <a class="next" href="product2.html"></a>
-        </div>
+	@{if model.maxPages !== 1}
+		<div class="row justify-content-sm-center">
+			<div class="paginator Dno2">
+				@{if model.currentPage <= 1}
+					<a class="prev disabled" href="#"></a>
+				@{else}
+					<!-- <a class="prev" href="@{sitemap_url('category')}@{model.items[0][0].linker}?page@{model.currentPage - 1}"></a> -->
+				@{fi}
+				<a class="current" href="#">@{model.currentPage}</a>
+				@{if model.currentPage + 1 < model.maxPages}
+					<span>&hellip;</span>
+				@{fi}
+				@{if model.currentPage !== model.maxPages}
+					<a href="#3">@{model.maxPages}</a>
+					<!-- <a class="next" href="@{sitemap_url('category')}@{model.items[0]}?page=@{model.maxPages}"></a> -->
+				@{else}
+					<a class="next disabled" href=""></a>
+				@{fi}
+        	</div>
 		</div>
+	@{fi}
 	</div>
-		</div>
+</div>

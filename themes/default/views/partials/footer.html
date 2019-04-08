@@ -8,9 +8,9 @@
 					<div class="col-md-12 col-sm-12  mt-sm-12 mt-1 ">
 						<h3 class="text-white font-weight-bold mb-1">Quick Links</h3>
 							<div class="textG">
-								<a href="about.html">About Us</a>
+								<a href="@{sitemap_url('about')}">About Us</a>
 							
-								<a href="contact.html">Contact Us</a>
+								<a href="@{sitemap_url('contact')}">Contact Us</a>
 							
 								<a href="help.html">Help</a>
 							
@@ -25,10 +25,10 @@
 						<h3 class="text-white font-weight-bold">Get in Touch</h3>
 						
 							
-								<i class="fas fa-mobile"></i><i>+972506415604</i>
+								<i class="fas fa-mobile"></i><i>@{F.global.config.phonenumber}</i>
 							
 								<i class="fas fa-envelope-open"></i>
-								<i href="Email:Liorb1975@gmail.com">Liorb1975@gmail.com</i>
+								<i href="Email:Liorb1975@gmail.com">@{F.global.config.emailcontactform}</i>
 							
 						
 					</div>
@@ -80,7 +80,7 @@
 	<!-- copyright -->
 	<div class="copy-right py-3">
 		<div class="container">
-			<p class="text-center text-white">© 2019 Electro Store.
+			<p class="text-center text-white">© 2019 Rich Tenders.
 			</p>
 		</div>
 	</div>

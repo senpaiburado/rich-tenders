@@ -6,22 +6,37 @@ exports.install = function() {
 	ROUTE('#detail', view_detail);
 	ROUTE('#checkout');
 	ROUTE('#order', view_order);
-	ROUTE('#account', 'account', ['authorize']);
+	ROUTE('#account', 'my_cab', ['authorize']);
 	ROUTE('#settings', 'settings', ['authorize']);
 	ROUTE('#account', view_signin, ['unauthorize']);
 	ROUTE('#logoff', redirect_logoff, ['authorize']);
 	ROUTE('#contact');
-	ROUTE('#about')
+	ROUTE('#about');
+	ROUTE('#product', view_product, ['*Product']);
 
 	// Payment process
 	ROUTE('#order/paypal/', paypal_process, ['*Order', 10000]);
 };
 
+function view_product() {
+	const self = this;
+	let url = self.sitemap_url('product');
+	let id = self.url.substring(url.length, self.url.length - 1);
+
+	let options = {}
+	options.id = id;
+	options.published = true;
+
+	self.sitemap();
+
+	$GET('Product', options, self.callback('product'));
+}
+
 function view_category() {
-	var self = this;
-	var url = self.sitemap_url('category');
-	var linker = self.url.substring(url.length, self.url.length - 1);
-	var category = null;
+	const self = this;
+	let url = self.sitemap_url('category');
+	let linker = self.url.substring(url.length, self.url.length - 1);
+	let category = null;
 
 	if (linker !== '/') {
 		category = F.global.categories.findItem('linker', linker);
@@ -34,27 +49,25 @@ function view_category() {
 	// Binds a sitemap
 	self.sitemap();
 
-	var options = {};
+	let options = {};
 
 	if (category) {
 		options.category = category.linker;
 		self.title(category.name);
 		//self.repository.category = category;
-
-		var path = self.sitemap_url('category');
-		var tmp = category;
+		let path = self.sitemap_url('category');
+		let tmp = category;
 		while (tmp) {
 			self.sitemap_add('category', tmp.name, path + tmp.linker + '/');
 			tmp = tmp.parent;
 		}
-
 	} else
 		self.title(self.sitemap_name('category'));
 
 	options.published = true;
 	options.limit = 9;
 
-	self.query.page && (options.page = self.query.page);
+	self.query.page ? (options.page = self.query.page) : (options.page = 1);
 	self.query.manufacturer && (options.manufacturer = self.query.manufacturer);
 	self.query.size && (options.size = self.query.size);
 	self.query.color && (options.color = self.query.color);
@@ -62,9 +75,8 @@ function view_category() {
 	self.query.sort && (options.sort = self.query.sort);
 
 	$QUERY('Product', options, function(err, response) {
-		//self.repository.linker_category = linker;
-		var arr = [];
-		for (var i = 0; i < Object.keys(response.items).length; i++) {
+		let arr = [];
+		for (let i = 0; i < Object.keys(response.items).length; i++) {
 			if (i < 3) {
 				if (!arr[0])
 					arr.push([]);
@@ -82,12 +94,17 @@ function view_category() {
 			}
 		}
 
-		console.log(arr);
-
-		self.view('category', {
-			items: arr,
-			category_name: category.name,
-			count: Object.keys(response.items).length
+		NOSQL('products').find().make(function(builder) {
+			builder.where('linker_category', options.category);
+			builder.callback(function(err, docs) {
+				self.view('category', {
+					items: arr,
+					category_name: category.name,
+					count: Object.keys(docs).length,
+					currentPage: options.page,
+					maxPages: Object.keys(docs).length <= 9 ? 1 : Math.ceil(Object.keys(docs).length / 9)
+				});
+			})
 		});
 	});
 }
@@ -99,7 +116,7 @@ function view_popular() {
 	self.query.manufacturer && (options.manufacturer = self.query.manufacturer);
 	self.query.size && (options.size = self.query.size);
 	self.sitemap();
-	$WORKFLOW('Product', 'popular', options, self.callback('special'));
+	$WORKFLOW('Product', 'popular', options, self.callback('category_product'));
 }
 
 function view_new() {
@@ -110,7 +127,7 @@ function view_new() {
 	self.query.manufacturer && (options.manufacturer = self.query.manufacturer);
 	self.query.size && (options.size = self.query.size);
 	self.sitemap();
-	$QUERY('Product', options, self.callback('special'));
+	$QUERY('Product', options, self.callback('category'));
 }
 
 function view_top() {
@@ -150,7 +167,7 @@ function view_detail(linker) {
 
 		self.title(response.name);
 		self.sitemap_change('detail', 'url', linker);
-		self.view('~cms/' + (response.template || 'product'), response);
+		self.view('product', response);
 	});
 }
 
@@ -187,12 +204,12 @@ function redirect_logoff() {
 }
 
 function view_signin() {
-	var self = this;
-	var hash = self.query.hash;
+	const self = this;
+	const hash = self.query.hash;
 
 	// Auto-login
 	if (hash && hash.length) {
-		var user = F.decrypt(hash);
+		const user = F.decrypt(hash);
 		if (user && user.expire > F.datetime.getTime()) {
 			MODEL('users').login(self, user.id);
 			self.redirect(self.sitemap_url('settings') + '?password=1');

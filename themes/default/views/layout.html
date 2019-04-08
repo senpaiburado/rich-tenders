@@ -3,7 +3,7 @@
 <head>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta charset="UTF-8" />
-	<meta name="keywords" content="Electro Store Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design"
+	<meta name="keywords" content="Rich Tenders Online Shop Electronics Mobile Phones PC Computers Tables Notebook Laptop"
 	/>
 	<script>
 		addEventListener("load", function () {
@@ -14,12 +14,17 @@
 			window.scrollTo(0, 1);
 		}
 	</script>
+
+<!-- <link rel="stylesheet" href="//cdn.componentator.com/spa.min@14.css"/> -->
+<script src="//cdn.componentator.com/spa.min@14.js"></script>
+@{import('meta', 'head', 'style.css', 'default.js', 'favicon.ico')}
 	<!-- //Meta tag Keywords -->
 
 	<!-- Custom-Files -->
 	<link href="/default/css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
 	<!-- Bootstrap css -->
 	<link href="/default/css/style.css" rel="stylesheet" type="text/css" media="all" />
+	<link rel="stylesheet" href="/default/css/ui.css" type="text/css" media="all" />
 	<!-- Main css -->
 	<link rel="stylesheet" href="/default/web/css/fontawesome-all.css" media="all">
 	<!-- Font-Awesome-Icons-CSS -->
@@ -30,97 +35,12 @@
 	<!-- //Custom-Files -->
 
 	<!-- web fonts -->
-	<link href="//fonts.googleapis.com/css?family=Lato:100,100i,300,300i,400,400i,700,700i,900,900i&amp;subset=latin-ext" rel="stylesheet">
+	<link href="//fonts.googleapis.com/css?family=Lato:100,100i,300,300i,400,400i,700,700i,900,900i&amp;subset=latin-ext" rel="stylesheet"/>
 	<link href="//fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i&amp;subset=cyrillic,cyrillic-ext,greek,greek-ext,latin-ext,vietnamese"
-	    rel="stylesheet">
+		rel="stylesheet"/>
 </head>
 <body data-jc="exec,binder,modificator">
-	<!-- <br />
-	<div data-jc="loading" class="ui-loading@{if !repository.loading} hidden@{fi}"></div>
-	<div data-jc="shoppingcart" data-jc-path="shoppingcart" data-jc-config="discount:@{if user}@{user.discount}@{else}0@{fi}"></div>
-	<div data-jc="message" data-jc-config="button:@(Close)"></div>
-	<div data-jc="autocomplete"></div>
-
-	<div class="container">
-
-		<div class="relative">
-			<div class="account">
-				@{if user}
-					<a href="@{sitemap_url('account')}" class="b">@{user.name}</a>
-					<a href="@{sitemap_url('settings')}"><i class="fa fa-cog"></i>@(Settings)</a>
-					<a href="@{sitemap_url('logoff')}"><i class="fa fa-sign-out"></i>@(Sign out)</a>
-				@{else}
-					<a href="@{sitemap_url('account')}"><i class="fa fa-lock"></i>@(Sign in)</a>
-				@{fi}
-			</div>
-		</div
-
-		<div class="row">
-			<div class="col-md-3">
-				<section class="categories">
-					<a href="/" class="logo"><img src="/img/logo.png" alt="@{'%name'}" border="0" /></a>
-					<div class="categoriescontainer">
-						<div class="categoriesbody bg-yellow fs12 ui-center m">
-							This is a new version of new <b>Total.js Eshop</b>. This version will be available soon for all Total.js members.
-						</div>
-
-						<div class="categoriesbody npb">
-							<div class="caption">@(We recommend)</div>
-						</div>
-						<nav>
-							@{foreach m in F.global.navigations.panel.children}
-								<a href="@{m.url}"><i class="fa fa-caret-right"></i>@{m.name}</a>
-							@{end}
-							<a href="@{sitemap_url('new')}"><i class="fa fa-caret-right"></i>@(New goods)</a>
-							<a href="@{sitemap_url('top')}"><i class="fa fa-caret-right"></i>@(Top products)</a>
-							<a href="@{sitemap_url('popular')}"><i class="fa fa-caret-right"></i>@(Popular products)<span>@(NEW)</span></a>
-							<a href="@{sitemap_url('category')}"><i class="fa fa-caret-right"></i>@(All products)</a>
-						</nav>
-						<div class="categoriesbody npb">
-							<div class="caption">@(Categories)</div>
-						</div>
-						@{view('partials/categories')}
-					</div>
-					<button id="mainmenu"><i class="fa fa-chevron-down"></i></button>
-				</section>
-			</div>
-			<div class="col-md-9">
-				<section class="body">
-
-					<header>
-						<nav>
-							@{foreach m in F.global.navigations.menu.children}
-								<a href="@{m.url}">@{if m.icon}<i class="fa fa-@{m.icon}"></i>@{fi}@{m.name}</a>
-							@{end}
-						</nav>
-						<div class="shoppingcart" data-m="shoppingcart.sum + shoppingcart">
-							<a href="@{sitemap_url('checkout')}"><b data-b="shoppingcart.sum" data-b-html="'@{global.config.currency_entity}'.format(value ? value.format(2) : (0).format(2))">...</b><span>@(Your shopping cart)</span></a>
-						</div>
-						<form class="search" action="@{sitemap_url('category')}" method="get">
-							<button><i class="fa fa-search"></i></button>
-							<div><input type="text" placeholder="@(Search products ...)" name="q" value="@{query.q}" id="search" autocomplete="off" /></div>
-						</form>
-					</header>
-
-					<nav class="breadcrumb">
-						@{foreach m in sitemap()}
-							@{if m.id === 'category'}
-								<i class="fa fa-caret-right"></i><a href="@{m.url}">@{m.name}</a>
-							@{else}
-								<i class="fa fa-caret-right"></i><a href="@{m.url}">@{m.name}</a>
-							@{fi}
-						@{end}
-					</nav>
-					@{body}
-				</section>
-			</div>
-		</div>
-	</div>
-	<br />
-	<br /> -->
-
 	<script src="@{global.js}"></script>
-	<div data-jc="loading" class="ui-loading@{if !repository.loading} hidden@{fi}"></div>
 
 	<div class="agile-main-top">
 		<div class="container-fluid">
@@ -133,18 +53,28 @@
 				<div class="col-lg-6  header-right mt-lg-0 mt-2">
 					<!-- header lists -->
 					<ul>
-					<li class="text-center  text-white">
+						@{if user}
+						<li class="text-center  text-white">
+								<a href="@{sitemap_url('account')}" class="text-white">
+									<i class="fas fa-sign-in-alt mr-2"></i> @{user.name} </a>
+						</li>
+						<li class="text-center  text-white">
+							<a href="@{sitemap_url('logoff')}"class="text-white">
+								<i class="fas fa-sign-in-alt mr-2"></i> @(Logout) </a>
+						</li>
+						<li class="text-center  text-white">
+								<i class="fas fa-phone mr-6"></i> @{user.phone}
+						</li>
+						@{else}
+						<li class="text-center  text-white">
 							<a href="#" data-toggle="modal" data-target="#exampleModal" class="text-white">
-								<i class="fas fa-sign-in-alt mr-2"></i> Log In </a>
+								<i class="fas fa-sign-in-alt mr-2"></i> @(Log In) </a>
 						</li>
 						<li class="text-center text-white">
 							<a href="#" data-toggle="modal" data-target="#exampleModal2" class="text-white">
-								<i class="fas fa-sign-out-alt mr-2"></i>Register </a>
+								<i class="fas fa-sign-out-alt mr-2"></i>@(Register) </a>
 						</li>
-						</li>
-						<li class="text-center  text-white">
-							<i class="fas fa-phone mr-6"></i> +972506415604
-						</li>
+						@{fi}
 					</ul>
 					<!-- //header lists -->
 				</div>
@@ -160,23 +90,27 @@
 		<div class="modal-dialog" role="document">
 			<div class="modal-content">
 				<div class="modal-header">
-					<h5 class="modal-title text-center">Log In</h5>
+					<h5 class="modal-title text-center">@(Log In)</h5>
 					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
 						<span aria-hidden="true">&times;</span>
 					</button>
 				</div>
-				<div class="modal-body">
-					<form action="#" method="post">
+				<div class="modal-body" data-jc="enter" data-jc-path="account.signin" data-jc-config="exec:signinsubmit" data-b="account.type" data-b-visible="value === 'signin'">
+						<p id="error-label-login"></p>
 						<div class="form-group">
-							<label class="col-form-label">Username</label>
-							<input type="text" class="form-control" placeholder=" " name="Name" required="">
+							<label class="col-form-label">@(Email)</label>
+							<div name="Email"
+								data-jc-path="account.signin.email" data-jc-config="required:true;maxlength:120;type:email" data-jc-value="'@'" data-jc="textbox"></div>
 						</div>
 						<div class="form-group">
-							<label class="col-form-label">Password</label>
-							<input type="password" class="form-control" placeholder=" " name="Password" required="">
+							<label class="col-form-label">@(Password)</label>
+							<div name="Password" data-jc="textbox"
+								data-jc-path="account.signin.password" data-jc-config="required:true;maxlength:40;type:password"></div>
 						</div>
-						<div class="right-w3l">
-							<input type="submit" class="form-control" value="Log in">
+						<div data-jc="error" data-jc-path="account.signin.response"></div>
+						<div class="right-w3l button b exec">
+								<input type="submit" class="button b exec form-control" data-exec="signinsubmit" name="submit" value="@(Log In)" 
+								data-jc="validation" data-jc-path="account.signin"/>
 						</div>
 						<div class="sub-w3l">
 							<div class="custom-control custom-checkbox mr-sm-2">
@@ -184,11 +118,10 @@
 								<label class="custom-control-label" for="customControlAutosizing">Remember me?</label>
 							</div>
 						</div>
-						<p class="text-center dont-do mt-3">Don't have an account?
-							<a href="#" data-toggle="modal" data-target="#exampleModal2">
-								Register Now</a>
+						<p class="text-center dont-do mt-3">@(Don't have an account?)
+							<a href="javascript:void(0);" data-toggle="modal" data-target="#exampleModal2">
+								@(Register Now)</a>
 						</p>
-					</form>
 				</div>
 			</div>
 		</div>
@@ -198,39 +131,44 @@
 		<div class="modal-dialog" role="document">
 			<div class="modal-content">
 				<div class="modal-header">
-					<h5 class="modal-title">Register</h5>
+					<h5 class="modal-title">@(Register)</h5>
 					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
 						<span aria-hidden="true">&times;</span>
 					</button>
 				</div>
 				<div class="modal-body">
-					<form action="#" method="post">
+						<p id="error-label-signup"></p>
 						<div class="form-group">
-							<label class="col-form-label">Your Name</label>
-							<input type="text" class="form-control" placeholder=" " name="Name" required="">
+							<label class="col-form-label">@(Your Firstname)</label>
+							<div data-jc="textbox" data-jc-path="account.signup.firstname" data-jc-config="required:true;maxlength:40"></div>
 						</div>
 						<div class="form-group">
-							<label class="col-form-label">Email</label>
-							<input type="email" class="form-control" placeholder=" " name="Email" required="">
+								<label class="col-form-label">@(Your Lastname)</label>
+								<div data-jc="textbox" data-jc-path="account.signup.lastname" data-jc-config="required:true;maxlength:40"></div>
+							</div>
+						<div class="form-group">
+							<label class="col-form-label">@(Email)</label>
+							<div data-jc="textbox" data-jc-path="account.signup.email" data-jc-config="required:true;maxlength:120;type:email" data-jc-value="'@'"></div>
 						</div>
 						<div class="form-group">
-							<label class="col-form-label">Password</label>
-							<input type="password" class="form-control" placeholder=" " name="Password" id="password1" required="">
+							<label class="col-form-label">@(Phone Number)</label>
+							<div data-jc="textbox" data-jc-path="account.signup.phone" data-jc-config="maxlength:30;type:phone;placeholder:@(International format)"></div>
 						</div>
 						<div class="form-group">
-							<label class="col-form-label">Confirm Password</label>
-							<input type="password" class="form-control" placeholder=" " name="Confirm Password" id="password2" required="">
+							<label class="col-form-label">@(Password)</label>
+							<div data-jc="textbox" data-jc-path="account.signup.password" data-jc-config="required:true;maxlength:30;type:password"></div>
 						</div>
-						<div class="right-w3l">
-							<input type="submit" class="form-control" value="Register">
+						<div class="form-group">
+							<label class="col-form-label">@(Confirm Password)</label>
+							<div data-jc="textbox" data-jc-path="account.signup.passwordreply" data-jc-config="required:true;maxlength:30;type:password"></div>
+						</div>
+						<div class="right-w3l button b exec">
+								<input type="submit" class="button b exec form-control" data-exec="signupsubmit" name="submit" value="@(Sign Up)" 
+								data-jc="validation" data-jc-path="account.signupsubmit"/>
 						</div>
 						<div class="sub-w3l">
-							<div class="custom-control custom-checkbox mr-sm-2">
-								<input type="checkbox" class="custom-control-input" id="customControlAutosizing2">
-								<label class="custom-control-label" for="customControlAutosizing2">I Accept to the Terms & Conditions</label>
-							</div>
+							<div data-jc="checkbox" data-jc-path="account.signup.isterms" class="b red m" onclick="this.style.display = 'none';">@(I agree with terms and conditions)</div>
 						</div>
-					</form>
 				</div>
 			</div>
 		</div>
@@ -245,7 +183,7 @@
 				<!-- logo -->
 				<div class="col-md-3 logo_agile">
 					<h1 class="text-center">
-						<a href="@{sitemap_url('/')}" class="font-weight-bold font-italic">
+						<a href="/" class="font-weight-bold font-italic">
 							<img src="/default/web/images/2001.png" alt=" " class="img-fluid1"> RichTenders
 						</a>
 					</h1>
@@ -256,31 +194,36 @@
 					<div class="row">
 						<!-- search -->
 						<div class="col-10 agileits_search">
-							<form class="form-inline" action="#" method="post">
+							<!-- <form class="form-inline" action="#" method="post">
 								<input class="form-control mr-sm-2" type="search" placeholder="Your request" aria-label="Search" required>
-								<button class="btn my-2 my-sm-0" type="submit">Search</button>
+								<button class="btn my-2 my-sm-0" type="submit">@(Search)</button>
+							</form> -->
+							<form class="form-inline" style="float: right;">
+									<div><input type="text" placeholder="@(Search products ...)" name="q" value="@{query.q}" id="search" autocomplete="off" />
+									</div>
 							</form>
 						</div>
 						<!-- //search -->
-						<!-- cart details 
+						
+						@{if F.global.config.shoppingenabled}
 						<div class="col-2 top_nav_right text-center mt-sm-0 mt-2">
-						<span class="product-new-top1 ">12</span>
+							<div class="product-new-top1 shoppingcart" data-m="shoppingcart.sum">
+								<a style="color: white;" href="@{sitemap_url('checkout')}"><b data-b="shoppingcart.sum" data-b-html="'@{global.config.currency_entity}'.format(value ? value.format(2) : (0).format(2))">0.00</b></a>
+							</div>
 							<div class="wthreecartaits wthreecartaits2 cart cart box_1">
-								<form action="#" method="post" class="last">
-									<input type="hidden" name="cmd" value="_cart">
-									<input type="hidden" name="display" value="1">
-									<button class="btn w3view-cart" type="submit" name="submit" value="">
-										<i class="fas fa-cart-arrow-down"></i>
-									</button>
-								</form>
+								<button class="btn w3view-cart" type="submit" name="submit" value="">
+									<i class="fas fa-cart-arrow-down"></i>
+								</button>
 							</div>
 						</div>
-						<!-- //cart details -->
+						@{fi}
 					</div>
+					
 				</div>
 			</div>
 		</div>
 	</div>
+	<div data-jc="autocomplete"></div>
 	<!-- shop locator (popup) -->
 	<!-- //header-bottom -->
 	<!-- navigation -->
@@ -289,8 +232,8 @@
 			<nav class="navbar navbar-expand-lg navbar-light bg-light">
 				<div class="agileits-navi_search">
 					<form action="#" method="post">
-						<select id="agileinfo-nav_search" name="agileinfo_search" class="border" onchange="location = this.value" onfocus="this.selectedIndex = -1;">
-							<option disable selected>Category</option>
+						<select id="agileinfo-nav_search" name="agileinfo_search" class="border" onchange="location = this.value">
+							<option selected>@(Category)</option>
 							@{if repository.category}
 								@{foreach m in repository.category}
 									@{if m.count}
@@ -314,175 +257,15 @@
 				<div class="collapse navbar-collapse" id="navbarSupportedContent">
 					<ul class="navbar-nav ml-auto text-center mr-xl-5">
 						<li class="nav-item active mr-lg-2 mb-lg-0 mb-2">
-							<a class="nav-link" href="@{sitemap_url('homepage')}">Home
+							<a class="nav-link" href="@{sitemap_url('homepage')}">@(Home)
 								<span class="sr-only">(current)</span>
 							</a>
 						</li>
-						<li class="nav-item dropdown mr-lg-2 mb-lg-0 mb-2">
-							<a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-								Electronics
-							</a>
-							<div class="dropdown-menu">
-								<div class="agile_inner_drop_nav_info p-4">
-									<h5 class="mb-3">Mobiles, Computers</h5>
-									<div class="row">
-										<div class="col-sm-6 multi-gd-img">
-											<ul class="multi-column-dropdown">
-												<li>
-													<a href="product.html">All Mobile Phones</a>
-												</li>
-												<li>
-													<a href="product.html">All Mobile Accessories</a>
-												</li>
-												<li>
-													<a href="product.html">Cases & Covers</a>
-												</li>
-												<li>
-													<a href="product.html">Screen Protectors</a>
-												</li>
-												<li>
-													<a href="product.html">Power Banks</a>
-												</li>
-												<li>
-													<a href="product.html">All Certified Refurbished</a>
-												</li>
-												<li>
-													<a href="product.html">Tablets</a>
-												</li>
-												<li>
-													<a href="product.html">Wearable Devices</a>
-												</li>
-												<li>
-													<a href="product.html">Smart Home</a>
-												</li>
-											</ul>
-										</div>
-										<div class="col-sm-6 multi-gd-img">
-											<ul class="multi-column-dropdown">
-												<li>
-													<a href="product.html">Laptops</a>
-												</li>
-												<li>
-													<a href="product.html">Drives & Storage</a>
-												</li>
-												<li>
-													<a href="product.html">Printers & Ink</a>
-												</li>
-												<li>
-													<a href="product.html">Networking Devices</a>
-												</li>
-												<li>
-													<a href="product.html">Computer Accessories</a>
-												</li>
-												<li>
-													<a href="product.html">Game Zone</a>
-												</li>
-												<li>
-													<a href="product.html">Software</a>
-												</li>
-											</ul>
-										</div>
-									</div>
-								</div>
-							</div>
-						</li>
-						<li class="nav-item dropdown mr-lg-2 mb-lg-0 mb-2">
-							<a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-								Appliances
-							</a>
-							<div class="dropdown-menu">
-								<div class="agile_inner_drop_nav_info p-4">
-									<h5 class="mb-3">TV, Appliances, Electronics</h5>
-									<div class="row">
-										<div class="col-sm-6 multi-gd-img">
-											<ul class="multi-column-dropdown">
-												<li>
-													<a href="product2.html">Televisions</a>
-												</li>
-												<li>
-													<a href="product2.html">Home Entertainment Systems</a>
-												</li>
-												<li>
-													<a href="product2.html">Headphones</a>
-												</li>
-												<li>
-													<a href="product2.html">Speakers</a>
-												</li>
-												<li>
-													<a href="product2.html">MP3, Media Players & Accessories</a>
-												</li>
-												<li>
-													<a href="product2.html">Audio & Video Accessories</a>
-												</li>
-												<li>
-													<a href="product2.html">Cameras</a>
-												</li>
-												<li>
-													<a href="product2.html">DSLR Cameras</a>
-												</li>
-												<li>
-													<a href="product2.html">Camera Accessories</a>
-												</li>
-											</ul>
-										</div>
-										<div class="col-sm-6 multi-gd-img">
-											<ul class="multi-column-dropdown">
-												<li>
-													<a href="product2.html">Musical Instruments</a>
-												</li>
-												<li>
-													<a href="product2.html">Gaming Consoles</a>
-												</li>
-												<li>
-													<a href="product2.html">All Electronics</a>
-												</li>
-												<li>
-													<a href="product2.html">Air Conditioners</a>
-												</li>
-												<li>
-													<a href="product2.html">Refrigerators</a>
-												</li>
-												<li>
-													<a href="product2.html">Washing Machines</a>
-												</li>
-												<li>
-													<a href="product2.html">Kitchen & Home Appliances</a>
-												</li>
-												<li>
-													<a href="product2.html">Heating & Cooling Appliances</a>
-												</li>
-												<li>
-													<a href="product2.html">All Appliances</a>
-												</li>
-											</ul>
-										</div>
-									</div>
-								</div>
-							</div>
-						</li>
 						<li class="nav-item mr-lg-2 mb-lg-0 mb-2">
-							<a class="nav-link" href="@{sitemap_url('about')}">About Us</a>
-						</li>
-						<li class="nav-item mr-lg-2 mb-lg-0 mb-2">
-							<a class="nav-link" href="product.html">New Arrivals</a>
-						</li>
-						<li class="nav-item dropdown mr-lg-2 mb-lg-0 mb-2">
-							<a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-								Pages
-							</a>
-							<div class="dropdown-menu">
-								<a class="dropdown-item" href="product.html">Product 1</a>
-								<a class="dropdown-item" href="product2.html">Product 2</a>
-								<div class="dropdown-divider"></div>
-								<a class="dropdown-item" href="single.html">Single Product 1</a>
-								<a class="dropdown-item" href="single2.html">Single Product 2</a>
-								<div class="dropdown-divider"></div>
-								<a class="dropdown-item" href="checkout.html">Checkout Page</a>
-								<a class="dropdown-item" href="payment.html">Payment Page</a>
-							</div>
+							<a class="nav-link" href="@{sitemap_url('about')}">@(About Us)</a>
 						</li>
 						<li class="nav-item">
-							<a class="nav-link" href="@{sitemap_url('contact')}">Contact Us</a>
+							<a class="nav-link" href="@{sitemap_url('contact')}">@(Contact Us)</a>
 						</li>
 					</ul>
 				</div>
@@ -514,10 +297,14 @@
 
 	</div>
 
+	@{if F.global.config.shoppingenabled}
+		<div data-jc="shoppingcart" data-jc-path="shoppingcart" data-jc-config="discount:@{if user}@{user.discount}@{else}0@{fi}"></div>
+	@{fi}
+
 	@{body}
 	@{view('partials/footer')}
 
-	<script src="/default/web/js/jquery-2.2.3.min.js"></script>
+	
 
 	<script>
 		$(document).ready(function () {
@@ -535,60 +322,16 @@
 	</script>
 	<!-- //nav smooth scroll -->
 
-	<!-- popup modal (for location)-->
-	<script src="/default/web/js/jquery.magnific-popup.js"></script>
-	<script>
-		$(document).ready(function () {
-			$('.popup-with-zoom-anim').magnificPopup({
-				type: 'inline',
-				fixedContentPos: false,
-				fixedBgPos: true,
-				overflowY: 'auto',
-				closeBtnInside: true,
-				preloader: false,
-				midClick: true,
-				removalDelay: 300,
-				mainClass: 'my-mfp-zoom-in'
-			});
-
-		});
-	</script>
-	<!-- //popup modal (for location)-->
-
-	<!-- cart-js -->
-	<script src="/default/web/js/minicart.js"></script>
-	<script>
-		paypals.minicarts.render(); //use only unique class names other than paypals.minicarts.Also Replace same class name in css and minicart.min.js
-
-		paypals.minicarts.cart.on('checkout', function (evt) {
-			var items = this.items(),
-				len = items.length,
-				total = 0,
-				i;
-
-			// Count the number of each item in the cart
-			for (i = 0; i < len; i++) {
-				total += items[i].get('quantity');
-			}
-
-			if (total < 3) {
-				alert('The minimum order quantity is 3. Please add more to your shopping cart before checking out');
-				evt.preventDefault();
-			}
-		});
-	</script>
-	<!-- //cart-js -->
-
 	<!-- password-script -->
 	<script>
 		window.onload = function () {
 			document.getElementById("password1").onchange = validatePassword;
 			document.getElementById("password2").onchange = validatePassword;
-		}
+		};
 
 		function validatePassword() {
-			var pass2 = document.getElementById("password2").value;
-			var pass1 = document.getElementById("password1").value;
+			const pass2 = document.getElementById("password2").value;
+			const pass1 = document.getElementById("password1").value;
 			if (pass1 != pass2)
 				document.getElementById("password2").setCustomValidity("Passwords Don't Match");
 			else
@@ -643,6 +386,76 @@
 	<!-- for bootstrap working -->
 	<script src="/default/web/js/bootstrap.js"></script>
 
+	<script>
+
+			var account = {};
+		
+			account.type = 'signin';
+		
+			function signupsubmit() {
+				console.log("Try to sign up...");
+				if (BLOCKED('account', 3000))
+					return;
+		
+				SETTER('loading', 'show');
+				AJAX('POST /api/account/create/', account.signup, function(response) {
+		
+					SETTER('loading', 'hide', 1000);
+		
+					if (response.success)
+						location.reload(true);
+					else {
+						RESET('account.signup.*', true);
+						//SET('account.signup.response', response);
+						document.getElementById("error-label-signup").innerHTML = "<b>" + response[0].error + "</b>";
+					}
+				});
+			}
+		
+			function signinsubmit() {
+				console.log("Try to sign in...");
+				if (BLOCKED('account', 3000))
+					return;
+
+					console.log("not blocked");
+		
+				AJAX('POST /api/account/login/', account.signin, function(response) {
+		
+					console.log("posted login: ", response);
+		
+					if (response.success)
+						location.reload(true);
+					else {
+						RESET('account.sigin.*', true);
+						// SET('account.sigin.response', response);
+						document.getElementById("error-label-login").innerHTML = "<b>" + response[0].error + "</b>";
+					}
+				});
+			}
+		
+			function passwordsubmit() {
+		
+				if (BLOCKED('account', 3000))
+					return;
+		
+				SETTER('loading', 'show');
+				AJAX('POST /api/account/password/', account.password, function(response) {
+					SETTER('loading', 'hide', 1000);
+					if (response.success)
+						SETTER('message', 'success', '@(We sent you the email with instructions for resetting password.)');
+					else {
+						RESET('account.password.*', true);
+						// SET('account.password.response', response);
+						document.getElementById("error-label-passwordsubmit").innerHTML = "<b>" + response[0].error + "</b>";
+					}
+				});
+			}
+		
+			function switchpassword() {
+				SET('account.type', account.type === 'password' ? 'signin' : 'password');
+			}
+		
+		</script>
 	
 
 </body>

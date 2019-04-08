@@ -83,34 +83,6 @@
 							</ul>
 						</div>
 						<!-- //reviews -->
-						<!-- electronics -->
-						<div class="left-side border-bottom py-2">
-							<h3 class="agileits-sear-head mb-3">Electronics</h3>
-							<ul>
-								@{foreach }
-
-								@{if repository.category}
-								@{foreach m in repository.category}
-									@{if m.count}
-										<li>
-											<input type="checkbox" class="checked">
-											<span class="span">@{m.name}</span>
-										</li>
-									@{fi}
-								@{end}
-							@{else}
-								@{foreach m in global.categories}
-									@{if m.count}
-										<li>
-											<input type="checkbox" class="checked">
-											<span class="span">@{m.name}</span>
-										</li>
-									@{fi}
-								@{end}
-							@{fi}
-							</ul>
-						</div>
-						<!-- //electronics -->
 					</div>
 					<!-- //product right -->
 				</div>
