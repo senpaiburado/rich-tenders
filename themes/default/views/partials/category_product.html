@@ -48,23 +48,23 @@
 
 
 	<!-- //product left -->
-	@{if model.maxPages !== 1}
+	@{if model.maxPages > 1}
 		<div class="row justify-content-sm-center">
 			<div class="paginator Dno2">
 				@{if model.currentPage <= 1}
 					<a class="prev disabled" href="#"></a>
 				@{else}
-					<!-- <a class="prev" href="@{sitemap_url('category')}@{model.items[0][0].linker}?page@{model.currentPage - 1}"></a> -->
+					<a class="prev" href="@{sitemap_url('category')}@{model.category}?page=@{Number(model.currentPage) - 1}"></a>
 				@{fi}
 				<a class="current" href="#">@{model.currentPage}</a>
 				@{if model.currentPage + 1 < model.maxPages}
 					<span>&hellip;</span>
 				@{fi}
-				@{if model.currentPage !== model.maxPages}
-					<a href="#3">@{model.maxPages}</a>
-					<!-- <a class="next" href="@{sitemap_url('category')}@{model.items[0]}?page=@{model.maxPages}"></a> -->
-				@{else}
+				@{if Number(model.currentPage) === Number(model.maxPages)}
 					<a class="next disabled" href=""></a>
+				@{else}
+					<a href="@{sitemap_url('category')}@{model.category}?page=@{model.maxPages}">@{model.maxPages}</a>
+					<a class="next" href="@{sitemap_url('category')}@{model.category}?page=@{Number(model.currentPage) + 1}"></a>
 				@{fi}
         	</div>
 		</div>

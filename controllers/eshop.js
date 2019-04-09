@@ -102,7 +102,8 @@ function view_category() {
 					category_name: category.name,
 					count: Object.keys(docs).length,
 					currentPage: options.page,
-					maxPages: Object.keys(docs).length <= 9 ? 1 : Math.ceil(Object.keys(docs).length / 9)
+					maxPages: Object.keys(docs).length <= 9 ? 1 : Math.ceil(Object.keys(docs).length / 9),
+					category: options.category
 				});
 			})
 		});
