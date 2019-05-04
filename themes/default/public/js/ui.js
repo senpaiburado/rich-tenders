@@ -467,7 +467,6 @@ COMPONENT('modificator', function(self) {
 
 		$(document).on('click', '.modify', function() {
 			var el = $(this);
-			console.log(el);
 			self.click(el.attrd('m'), el.attrd('m-schema'));
 		});
 	};
@@ -547,7 +546,6 @@ COMPONENT('modificator', function(self) {
 		self.find('[data-m]').each(function() {
 
 			var el = $(this);
-			console.log(el);
 			var path = (el.attrd('m') || '').replace('%', 'jctmp.');
 			var p = '';
 			var schema = '';
@@ -975,7 +973,6 @@ COMPONENT('textbox', function(self, config) {
 		else
 			value = value.toString();
 
-			console.log(value);
 		EMIT('reflow', self.name);
 
 		switch (self.type) {
@@ -1194,7 +1191,6 @@ COMPONENT('error', function(self, config) {
 	};
 
 	self.setter = function(value) {
-		console.log("Setter", value);
 
 		if (!(value instanceof Array) || !value.length) {
 			self.tclass('hidden', true);

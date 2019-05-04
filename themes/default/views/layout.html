@@ -320,68 +320,6 @@
 			);
 		});
 	</script>
-	<!-- //nav smooth scroll -->
-
-	<!-- password-script -->
-	<script>
-		window.onload = function () {
-			document.getElementById("password1").onchange = validatePassword;
-			document.getElementById("password2").onchange = validatePassword;
-		};
-
-		function validatePassword() {
-			const pass2 = document.getElementById("password2").value;
-			const pass1 = document.getElementById("password1").value;
-			if (pass1 != pass2)
-				document.getElementById("password2").setCustomValidity("Passwords Don't Match");
-			else
-				document.getElementById("password2").setCustomValidity('');
-			//empty string means no validation error
-		}
-	</script>
-	<!-- //password-script -->
-	
-	<!-- scroll seller -->
-	<script src="/default/web/js/scroll.js"></script>
-	<!-- //scroll seller -->
-
-	<!-- smoothscroll -->
-	<script src="/default/web/js/SmoothScroll.min.js"></script>
-	<!-- //smoothscroll -->
-
-	<!-- start-smooth-scrolling -->
-	<script src="/default/web/js/move-top.js"></script>
-	<script src="/default/web/js/easing.js"></script>
-	<script>
-		jQuery(document).ready(function ($) {
-			$(".scroll").click(function (event) {
-				event.preventDefault();
-
-				$('html,body').animate({
-					scrollTop: $(this.hash).offset().top
-				}, 1000);
-			});
-		});
-	</script>
-	<!-- //end-smooth-scrolling -->
-
-	<!-- smooth-scrolling-of-move-up -->
-	<script>
-		$(document).ready(function () {
-			/*
-			var defaults = {
-				containerID: 'toTop', // fading element id
-				containerHoverID: 'toTopHover', // fading element hover id
-				scrollSpeed: 1200,
-				easingType: 'linear' 
-			};
-			*/
-			$().UItoTop({
-				easingType: 'easeOutQuart'
-			});
-		});
-	</script>
-	<!-- //smooth-scrolling-of-move-up -->
 
 	<!-- for bootstrap working -->
 	<script src="/default/web/js/bootstrap.js"></script>
@@ -393,7 +331,6 @@
 			account.type = 'signin';
 		
 			function signupsubmit() {
-				console.log("Try to sign up...");
 				if (BLOCKED('account', 3000))
 					return;
 		
@@ -413,15 +350,10 @@
 			}
 		
 			function signinsubmit() {
-				console.log("Try to sign in...");
 				if (BLOCKED('account', 3000))
 					return;
-
-					console.log("not blocked");
 		
 				AJAX('POST /api/account/login/', account.signin, function(response) {
-		
-					console.log("posted login: ", response);
 		
 					if (response.success)
 						location.reload(true);
